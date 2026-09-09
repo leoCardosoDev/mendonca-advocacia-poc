@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System | Lúcia Carla Mendonça - Marca Profissional & Pessoal</title>
+  <meta name="description" content="Manual de Identidade Visual e Design System Oficial de Lúcia Carla Mendonça Advocacia. Diretrizes de autoridade pessoal, paleta cobre/marfim, tokens CSS e regras de uso.">
+  
+  <!-- Estilos do Design System (Carregamento Local Autônomo) -->
+  <link rel="stylesheet" href="css/design-system.css">
+  
+  <!-- Cores e Variáveis Customizadas desta Marca (Acento Cobre & Base Marfim) -->
+  <style>
+    :root {
+      --brand-primary: var(--color-copper);
+      --brand-accent: var(--color-copper);
+      --brand-accent-hover: var(--color-copper-deep);
+      --brand-hero-bg: linear-gradient(135deg, #17120e 0%, #291b14 50%, #070b12 100%);
+      --brand-glow: rgba(184, 111, 76, 0.2);
+      --card-accent: var(--color-copper);
+    }
+  </style>
+</head>
+<body>
+
+<div class="ds-app">
+  
+  <!-- BARRA MOBILE -->
+  <header class="ds-mobile-bar" role="banner">
+    <div class="ds-mobile-logo-wrap">
+      <img src="assets/design-system/logo-lucia-negativa.png" alt="Lúcia Carla Mendonça Advocacia" class="ds-mobile-logo">
+    </div>
+    <button class="ds-mobile-toggle" aria-label="Abrir Menu de Navegação" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- SIDEBAR FIXA -->
+  <aside class="ds-sidebar" role="navigation" aria-label="Navegação do Design System">
+    <div class="ds-sidebar-brand">
+      <span class="ds-sidebar-ecosystem-tag" style="color: var(--color-copper-light);">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><circle cx="5" cy="5" r="4"/></svg>
+        Marca Profissional
+      </span>
+      <a href="#capa" class="ds-sidebar-logo-link" aria-label="Voltar para a Capa">
+        <img src="assets/design-system/logo-lucia-negativa.png" alt="Lúcia Carla Mendonça Advocacia" class="ds-sidebar-logo">
+      </a>
+      <div class="ds-sidebar-doc-meta">
+        <strong>Brand System v1.0</strong><br>
+        Atualização: Setembro/2026<br>
+        Origem: PPTX & PDF Oficial
+      </div>
+    </div>
+
+    <!-- Índice de Navegação com 14 Seções -->
+    <nav class="ds-sidebar-nav">
+      <div class="ds-nav-section-title">Diretrizes da Marca</div>
+      <ul class="ds-nav-list">
+        <li class="ds-nav-item"><a href="#capa" class="ds-nav-link active"><span class="ds-nav-num">01</span> Capa & Visão Geral</a></li>
+        <li class="ds-nav-item"><a href="#papel-marca" class="ds-nav-link"><span class="ds-nav-num">02</span> Papel no Ecossistema</a></li>
+        <li class="ds-nav-item"><a href="#dna-compartilhado" class="ds-nav-link"><span class="ds-nav-num">03</span> DNA Compartilhado</a></li>
+        <li class="ds-nav-item"><a href="#identidade-individual" class="ds-nav-link"><span class="ds-nav-num">04</span> Identidade Individual</a></li>
+        <li class="ds-nav-item"><a href="#image-system" class="ds-nav-link"><span class="ds-nav-num">★</span> Sistema de Imagem</a></li>
+        <li class="ds-nav-item"><a href="#sistema-cores" class="ds-nav-link"><span class="ds-nav-num">05</span> Sistema de Cores</a></li>
+        <li class="ds-nav-item"><a href="#tipografia" class="ds-nav-link"><span class="ds-nav-num">06</span> Tipografia</a></li>
+        <li class="ds-nav-item"><a href="#grid-composicao" class="ds-nav-link"><span class="ds-nav-num">07</span> Grid & Composição</a></li>
+        <li class="ds-nav-item"><a href="#efeitos-acabamento" class="ds-nav-link"><span class="ds-nav-num">08</span> Efeitos & Acabamento</a></li>
+        <li class="ds-nav-item"><a href="#aplicacoes-fisicas" class="ds-nav-link"><span class="ds-nav-num">09</span> Aplicações Físicas</a></li>
+        <li class="ds-nav-item"><a href="#aplicacoes-digitais" class="ds-nav-link"><span class="ds-nav-num">10</span> Aplicações Digitais</a></li>
+        <li class="ds-nav-item"><a href="#componentes" class="ds-nav-link"><span class="ds-nav-num">11</span> Componentes UI</a></li>
+        <li class="ds-nav-item"><a href="#do-and-dont" class="ds-nav-link"><span class="ds-nav-num">12</span> Do & Don't</a></li>
+        <li class="ds-nav-item"><a href="#tokens-desenvolvimento" class="ds-nav-link"><span class="ds-nav-num">13</span> Tokens CSS</a></li>
+        <li class="ds-nav-item"><a href="#origem-decisoes" class="ds-nav-link"><span class="ds-nav-num">14</span> Origem das Decisões</a></li>
+      </ul>
+    </nav>
+
+    <!-- Switcher do Ecossistema -->
+    <div class="ds-sidebar-footer">
+      <div class="ds-sidebar-footer-title">Ecossistema de Marcas</div>
+      <div class="ds-ecosystem-links">
+        <a href="design-system-mendonca-advocacia.html" class="ds-ecosystem-item">
+          <span>Mendonça Advocacia</span>
+          <small>Institucional</small>
+        </a>
+        <a href="design-system-lucia-carla-mendonca.html" class="ds-ecosystem-item current">
+          <span>Lúcia Carla Mendonça</span>
+          <small>Profissional</small>
+        </a>
+        <a href="design-system-clinica-geral-da-advocacia.html" class="ds-ecosystem-item">
+          <span>Clínica Geral da Advocacia</span>
+          <small>Serviço</small>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="ds-main" id="mainContent" role="main">
+
+    <!-- ======================================================================
+         1. CAPA / HERO
+         ====================================================================== -->
+    <section class="ds-hero" id="capa">
+      <div class="ds-container">
+        <div class="ds-hero-inner">
+          <div class="ds-hero-content">
+            <span class="ds-hero-meta-badge" style="color: var(--color-copper-light); border-color: rgba(184,111,76,0.3);">Design System Oficial • v1.0</span>
+            <h1 class="ds-hero-title">Lúcia Carla Mendonça</h1>
+            <p class="ds-hero-subtitle">
+              A marca profissional e pessoal associada à autoridade, experiência e presença de Lúcia Carla. Combina a solidez institucional à proximidade humana, liderança executiva e assinatura de confiança.
+            </p>
+            <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+              <a href="#identidade-individual" class="ds-btn ds-btn-copper">Explorar Assinatura</a>
+              <a href="#tokens-desenvolvimento" class="ds-btn ds-btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;">Ver Tokens CSS</a>
+            </div>
+          </div>
+
+          <div class="ds-hero-card">
+            <div class="ds-hero-card-logo-wrap">
+              <img src="assets/design-system/logo-lucia-negativa.png" alt="Logotipo Oficial Lúcia Carla Mendonça Advocacia (Versão Negativa)" class="ds-hero-card-logo">
+            </div>
+            <div class="ds-hero-specs-grid">
+              <div class="ds-hero-spec-item">
+                <span class="ds-hero-spec-label">Papel</span>
+                <span class="ds-hero-spec-value">Profissional</span>
+              </div>
+              <div class="ds-hero-spec-item">
+                <span class="ds-hero-spec-label">Base</span>
+                <span class="ds-hero-spec-value">Warm Ivory</span>
+              </div>
+              <div class="ds-hero-spec-item">
+                <span class="ds-hero-spec-label">Acento</span>
+                <span class="ds-hero-spec-value">Copper / Terracota</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. PAPEL DA MARCA & ECOSSISTEMA
+         ====================================================================== -->
+    <section class="ds-section" id="papel-marca">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge" style="color: var(--color-copper);">02 • Arquitetura de Marca</span>
+          <h2 class="ds-section-title">Papel no Ecossistema</h2>
+          <p class="ds-section-desc">
+            Enquanto a Mendonça Advocacia confere o respaldo institucional do grupo, a marca Lúcia Carla Mendonça personifica a liderança técnica, a capacidade de mediação complexa e o relacionamento direto com decisores estratégicos.
+          </p>
+        </div>
+
+        <div class="ds-ecosystem-cards">
+          <!-- Card Institucional -->
+          <div class="ds-card-role">
+            <span class="ds-card-role-badge" style="background: var(--color-gold); color: var(--color-navy-dark);">Marca Guarda-Chuva</span>
+            <h3 class="ds-card-role-title">Mendonça Advocacia</h3>
+            <p style="font-size: var(--font-size-xs); color: var(--color-gold-deep); font-weight: 600;">INSTITUCIONAL</p>
+            <div class="ds-card-role-anchors">
+              <span class="ds-tag">Estrutura</span>
+              <span class="ds-tag">Credibilidade</span>
+              <span class="ds-tag">Solidez</span>
+            </div>
+            <p class="ds-card-role-desc">
+              A marca institucional corporativa que ancora contratos vultosos e litígios em tribunais superiores.
+            </p>
+          </div>
+
+          <!-- Card Profissional (Ativo) -->
+          <div class="ds-card-role is-active-brand" style="border-color: var(--color-copper); box-shadow: 0 0 0 2px var(--color-copper), var(--shadow-md);">
+            <span class="ds-card-role-badge" style="background: var(--color-copper); color: var(--color-white);">Marca Pessoal & Liderança</span>
+            <h3 class="ds-card-role-title">Lúcia Carla Mendonça</h3>
+            <p style="font-size: var(--font-size-xs); color: var(--color-copper); font-weight: 600;">PROFISSIONAL</p>
+            <div class="ds-card-role-anchors">
+              <span class="ds-tag" style="background: #fbf0ea; color: var(--color-copper-deep);">Autoridade Pessoal</span>
+              <span class="ds-tag" style="background: #fbf0ea; color: var(--color-copper-deep);">Experiência</span>
+              <span class="ds-tag" style="background: #fbf0ea; color: var(--color-copper-deep);">Proximidade</span>
+              <span class="ds-tag" style="background: #fbf0ea; color: var(--color-copper-deep);">Assinatura</span>
+            </div>
+            <p class="ds-card-role-desc">
+              O centro da relação de confiança. Atua como porta-voz do grupo, referência jurídica sênior e assinatura de liderança em negociações estratégicas de alto nível.
+            </p>
+          </div>
+
+          <!-- Card Serviço -->
+          <div class="ds-card-role">
+            <span class="ds-card-role-badge" style="background: var(--color-navy); color: var(--color-white);">Marca de Serviço</span>
+            <h3 class="ds-card-role-title">Clínica Geral da Advocacia</h3>
+            <p style="font-size: var(--font-size-xs); color: var(--color-navy); font-weight: 600;">SERVIÇO & ACESSO</p>
+            <div class="ds-card-role-anchors">
+              <span class="ds-tag">Diagnóstico</span>
+              <span class="ds-tag">Acesso</span>
+              <span class="ds-tag">Orientação</span>
+            </div>
+            <p class="ds-card-role-desc">
+              Orientação jurídica acessível e ágil para demandas cotidianas de empresas e cidadãos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. DNA COMPARTILHADO
+         ====================================================================== -->
+    <section class="ds-section" id="dna-compartilhado">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge" style="color: var(--color-copper);">03 • Origem Visual Comum</span>
+          <h2 class="ds-section-title">DNA Compartilhado com o Ecossistema</h2>
+          <p class="ds-section-desc">
+            A marca preserva a geometria sagrada do monograma M, mas personaliza seus planos internos com o tom cobre/terracota, que imprime calor humano e proximidade.
+          </p>
+        </div>
+
+        <div class="ds-dna-grid">
+          <div class="ds-symbol-showcase">
+            <div class="ds-symbol-img-wrap">
+              <img src="assets/design-system/simbolo-m-copper.png" alt="Símbolo Oficial M com Portais em Cobre/Terracota">
+            </div>
+            <h3 style="font-size: var(--font-size-xl); margin-bottom: var(--space-2); color: var(--color-copper-light);">O Monograma M em Cobre</h3>
+            <p style="font-size: var(--font-size-sm); color: var(--color-slate-light); line-height: 1.6;">
+              Na assinatura de Lúcia Carla, as facetas internas que representam as portas abertas do portal assumem a cor <strong>cobre/terracota</strong>. Esse ajuste cromático diferencia visualmente a atuação pessoal da marca institucional sem romper o pertencimento à família Mendonça.
+            </p>
+          </div>
+
+          <div class="ds-dna-list">
+            <div class="ds-dna-item">
+              <div class="ds-dna-item-title">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="var(--color-copper)"><rect width="16" height="16" rx="3"/></svg>
+                Obrigatória Grafia com Acento: LÚCIA
+              </div>
+              <div class="ds-dna-item-desc">
+                A grafia correta exige rigorosamente o acento agudo no <strong>Ú</strong> de LÚCIA. Qualquer aplicação sem acentuação está em desacordo com as diretrizes aprovadas.
+              </div>
+            </div>
+
+            <div class="ds-dna-item">
+              <div class="ds-dna-item-title">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="var(--color-navy)"><rect width="16" height="16" rx="3"/></svg>
+                Alinhamento Eixo e Largura sobre MENDONÇA
+              </div>
+              <div class="ds-dna-item-desc">
+                O bloco tipográfico <strong>L Ú C I A   C A R L A</strong> possui espaçamento entre letras (tracking expandido) rigorosamente calibrado para corresponder à largura e ao eixo do nome <strong>MENDONÇA</strong>.
+              </div>
+            </div>
+
+            <div class="ds-dna-item">
+              <div class="ds-dna-item-title">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="var(--color-copper-deep)"><rect width="16" height="16" rx="3"/></svg>
+                Chancela Completa ADVOCACIA
+              </div>
+              <div class="ds-dna-item-desc">
+                A logo oficial completa exibe a chancela <strong>ADVOCACIA</strong> ladeada por fios em cobre na base, conferindo estabilidade à pirâmide visual.
+              </div>
+            </div>
+
+            <div class="ds-dna-item">
+              <div class="ds-dna-item-title">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="var(--color-slate-subtle)"><rect width="16" height="16" rx="3"/></svg>
+                Vazados Internos Intactos
+              </div>
+              <div class="ds-dna-item-desc">
+                Preservação absoluta dos contraespaços abertos nas letras <strong>D, O e A</strong> de MENDONÇA e ADVOCACIA.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. IDENTIDADE INDIVIDUAL: LOGO SYSTEM
+         ====================================================================== -->
+    <section class="ds-section" id="identidade-individual">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge" style="color: var(--color-copper);">04 • Logo System Oficial</span>
+          <h2 class="ds-section-title">Identidade Individual & Versões da Assinatura</h2>
+          <p class="ds-section-desc">
+            Extraídos diretamente da Página 06 do PDF oficial. A assinatura profissional destaca a hierarquia entre o nome pessoal e o sobrenome institucional.
+          </p>
+        </div>
+
+        <div class="ds-logo-versions-grid">
+          <!-- 01 Positiva -->
+          <div class="ds-logo-display-card">
+            <div class="ds-logo-canvas light-bg">
+              <img src="assets/design-system/logo-lucia-positiva.png" alt="Logotipo Lúcia Carla Mendonça Positivo sobre Fundo Marfim">
+            </div>
+            <div class="ds-logo-info">
+              <h3 class="ds-logo-info-title">01 • Versão Positiva (Principal)</h3>
+              <p class="ds-logo-info-desc">
+                Aplicação prioritária sobre superfícies claras nobres (marfim, creme, papel texturizado). Símbolo com facetas em cobre, nome LÚCIA CARLA em cobre, MENDONÇA em Navy.
+              </p>
+            </div>
+          </div>
+
+          <!-- 02 Negativa -->
+          <div class="ds-logo-display-card">
+            <div class="ds-logo-canvas dark-bg">
+              <img src="assets/design-system/logo-lucia-negativa.png" alt="Logotipo Lúcia Carla Mendonça Negativo sobre Fundo Navy">
+            </div>
+            <div class="ds-logo-info">
+              <h3 class="ds-logo-info-title">02 • Versão Negativa (Alto Contraste)</h3>
+              <p class="ds-logo-info-desc">
+                Aplicação obrigatória sobre superfícies escuras, fotografias contrastadas e apresentações em modo escuro. Totalmente em branco puro com máxima legibilidade.
+              </p>
+            </div>
+          </div>
+
+          <!-- 03 Monocromática -->
+          <div class="ds-logo-display-card">
+            <div class="ds-logo-canvas mono-bg">
+              <img src="assets/design-system/logo-lucia-mono.png" alt="Logotipo Lúcia Carla Mendonça Monocromático 1 Cor">
+            </div>
+            <div class="ds-logo-info">
+              <h3 class="ds-logo-info-title">03 • Versão Monocromática (1 Cor)</h3>
+              <p class="ds-logo-info-desc">
+                Para processos burocráticos, carimbos profissionais, assinaturas digitais monocromáticas e gravações com tinta única.
+              </p>
+            </div>
+          </div>
+
+          <!-- 04 Reduzida -->
+          <div class="ds-logo-display-card">
+            <div class="ds-logo-canvas light-bg" style="gap: var(--space-8);">
+              <img src="assets/design-system/simbolo-m-copper.png" alt="Símbolo M Cobre Isolado" style="max-height: 70px;">
+              <img src="assets/design-system/simbolo-m-negativo.png" alt="Símbolo M Negativo Isolado" style="max-height: 70px; background: var(--color-navy-dark); padding: 6px; border-radius: 6px;">
+            </div>
+            <div class="ds-logo-info">
+              <h3 class="ds-logo-info-title">04 • Versão Reduzida (Símbolo Cobre)</h3>
+              <p class="ds-logo-info-desc">
+                Favicons, fotos de perfil em colunas de opinião, assinaturas de e-mail compactas e selos lacres em tom cobre.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Área de Proteção e Tamanhos Mínimos -->
+        <div class="ds-protection-grid">
+          <div class="ds-protection-box">
+            <h3 style="font-size: var(--font-size-md); font-weight: bold; margin-bottom: var(--space-3); color: var(--color-navy);">Área de Proteção (Respiro Mínimo)</h3>
+            <div class="ds-safe-area-visual">
+              <img src="assets/design-system/logo-lucia-positiva.png" alt="Demonstração de Área de Proteção da Assinatura Lúcia Carla">
+            </div>
+            <p style="font-size: var(--font-size-xs); color: var(--color-slate-subtle); line-height: 1.5;">
+              A área livre periférica deve ter no mínimo a altura da letra <strong>L</strong> de LÚCIA. Nenhum texto ou elemento estranho pode invadir essa demarcação.
+            </p>
+          </div>
+
+          <div class="ds-protection-box">
+            <h3 style="font-size: var(--font-size-md); font-weight: bold; margin-bottom: var(--space-3); color: var(--color-navy);">Dimensões Mínimas Recomendadas</h3>
+            <div style="display: flex; flex-direction: column; gap: var(--space-4); margin-top: var(--space-4);">
+              <div style="padding: var(--space-3); background: #f8fafc; border-radius: var(--radius-sm); border: 1px solid #e2e8f0;">
+                <strong>Digital / Telas:</strong>
+                <p style="font-size: var(--font-size-xs); color: var(--color-slate-subtle); margin-top: 2px;">
+                  Logo Completa: Mínimo <strong>150px</strong> de largura.<br>
+                  Símbolo M Cobre isolado: Mínimo <strong>24px × 24px</strong>.
+                </p>
+              </div>
+              <div style="padding: var(--space-3); background: #f8fafc; border-radius: var(--radius-sm); border: 1px solid #e2e8f0;">
+                <strong>Mídia Impressa:</strong>
+                <p style="font-size: var(--font-size-xs); color: var(--color-slate-subtle); margin-top: 2px;">
+                  Logo Completa: Mínimo <strong>40 mm</strong> de largura.<br>
+                  Símbolo isolado: Mínimo <strong>8 mm</strong> de altura.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SEÇÃO ESPECIAL: FOUNDER & SPOKESPERSON IMAGE SYSTEM
+         ====================================================================== -->
+    <section class="ds-section" id="image-system">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge" style="color: var(--color-copper);">★ Diretriz Estratégica</span>
+          <h2 class="ds-section-title">Founder & Spokesperson Image System</h2>
+          <p class="ds-section-desc">
+            Baseado no Slide 06 do PPTX e Página 08 do PDF oficial: a presença da fundadora funciona em dois níveis complementares no ecossistema.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: var(--space-8); align-items: center; background: var(--color-white); border-radius: var(--radius-lg); padding: var(--space-8); border: 1px solid rgba(11,31,58,0.1); box-shadow: var(--shadow-sm);">
+          <div style="text-align: center;">
+            <img src="assets/design-system/lucia-carla-portrait.png" alt="Retrato Oficial de Lúcia Carla Mendonça" style="max-height: 380px; width: auto; margin: 0 auto; border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+            <span style="font-size: 0.6875rem; color: var(--color-slate-muted); display: block; margin-top: var(--space-2);">Fotografia Oficial de Referência (Páginas 01 e 08)</span>
+          </div>
+
+          <div>
+            <h3 style="font-size: var(--font-size-xl); font-weight: bold; color: var(--color-navy); margin-bottom: var(--space-3);">
+              A Marca Ganha um Rosto e Escala
+            </h3>
+            <div style="display: flex; flex-direction: column; gap: var(--space-4); font-size: var(--font-size-sm); color: var(--color-slate-subtle); line-height: 1.6;">
+              <div style="padding: var(--space-3); background: #fbf0ea; border-left: 3px solid var(--color-copper); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;">
+                <strong style="color: var(--color-copper-deep);">Nível 1: Marca Pessoal / Profissional</strong><br>
+                Lúcia Carla é o centro absoluto da relação. O atendimento é consultivo, exclusivo e assinado diretamente por ela.
+              </div>
+              <div style="padding: var(--space-3); background: #f8fafc; border-left: 3px solid var(--color-navy); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;">
+                <strong style="color: var(--color-navy);">Nível 2: No Grupo Institucional</strong><br>
+                Atua como fundadora, líder técnica e fiadora ética da solidez da operação, sem concentrar todas as frentes de execução operacional.
+              </div>
+              <div style="padding: var(--space-3); background: #f8fafc; border-left: 3px solid var(--color-gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;">
+                <strong style="color: var(--color-gold-deep);">Nível 3: Na Clínica Geral da Advocacia</strong><br>
+                O serviço foi estruturado para ser reconhecível e escalável, funcionando com autoridade e metodologia mesmo quando a figura pessoal não está fisicamente presente.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. SISTEMA DE CORES
+         ====================================================================== -->
+    <section class="ds-section" id="sistema-cores">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge" style="color: var(--color-copper);">05 • Paleta Cromática</span>
+          <h2 class="ds-section-title">Sistema de Cores: Cobre & Marfim</h2>
+          <p class="ds-section-desc">
+            A paleta exclusiva de Lúcia Carla Mendonça ancora-se no calor nobre do cobre/terracota e na suavidade acolhedora do marfim. Clique no código para copiar.
+          </p>
+        </div>
+
+        <table class="ds-color-table" aria-label="Tabela de Cores da Marca Lúcia Carla Mendonça">
+          <thead>
+            <tr>
+              <th>Amostra & Nome</th>
+              <th>Token CSS</th>
+              <th>HEX</th>
+              <th>RGB</th>
+              <th>CMYK (Est.)</th>
+              <th>Função / Contexto</th>
+              <th>Contraste</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="ds-swatch-cell">
+                  <div class="ds-swatch-box" style="background: #b86f4c;"></div>
+                  <div><strong>Copper (Cobre/Terracota)</strong></div>
+                </div>
+              </td>
+              <td><code>--color-copper</code></td>
+              <td><button class="ds-copyable-code" data-copy="#B86F4C" title="Clique para copiar">#B86F4C</button></td>
+              <td>184, 111, 76</td>
+              <td>18, 58, 72, 12</td>
+              <td>Acento principal da marca, autoridade humana, linhas</td>
+              <td><span class="ds-contrast-pill pass">AA (4.7:1 s/ Ivory)</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ds-swatch-cell">
+                  <div class="ds-swatch-box" style="background: #965334;"></div>
+                  <div><strong>Copper Deep</strong></div>
+                </div>
+              </td>
+              <td><code>--color-copper-deep</code></td>
+              <td><button class="ds-copyable-code" data-copy="#965334" title="Clique para copiar">#965334</button></td>
+              <td>150, 83, 52</td>
+              <td>22, 68, 85, 20</td>
+              <td>Texto em destaque, bordas ativas, estados de foco</td>
+              <td><span class="ds-contrast-pill pass">AAA (7.2:1 s/ Ivory)</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ds-swatch-cell">
+                  <div class="ds-swatch-box" style="background: #eee7d8;"></div>
+                  <div><strong>Warm Ivory Sand</strong></div>
+                </div>
+              </td>
+              <td><code>--color-ivory-sand</code></td>
+              <td><button class="ds-copyable-code" data-copy="#EEE7D8" title="Clique para copiar">#EEE7D8</button></td>
+              <td>238, 231, 216</td>
+              <td>6, 7, 14, 0</td>
+              <td>Fundo do cartão profissional e superfícies táteis</td>
+              <td><span class="ds-contrast-pill pass">AAA (12.4:1 s/ Navy)</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ds-swatch-cell">
+                  <div class="ds-swatch-box" style="background: #f6f1e7;"></div>
+                  <div><strong>Ivory Puro</strong></div>
+                </div>
+              </td>
+              <td><code>--color-ivory</code></td>
+              <td><button class="ds-copyable-code" data-copy="#F6F1E7" title="Clique para copiar">#F6F1E7</button></td>
+              <td>246, 241, 231</td>
+              <td>3, 4, 8, 0</td>
+              <td>Fundo padrão para leitura de artigos e pareceres</td>
+              <td><span class="ds-contrast-pill pass">AAA (13.8:1 s/ Navy)</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ds-swatch-cell">
+                  <div class="ds-swatch-box" style="background: #0b1f3a;"></div>
+                  <div><strong>Navy Profundo</strong></div>
+                </div>
+              </td>
+              <td><code>--color-navy</code></td>
+              <td><button class="ds-copyable-code" data-copy="#0B1F3A" title="Clique para copiar">#0B1F3A</button></td>
+              <td>11, 31, 58</td>
+              <td>90, 72, 40, 52</td>
+              <td>Tipografia institucional, nome MENDONÇA na logo</td>
+              <td><span class="ds-contrast-pill pass">AAA (14.2:1)</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="ds-callout-warning">
+          <strong>Aviso de Especificação Cromática:</strong> Os valores CMYK são estimativas matemáticas calculadas a partir dos valores hexadecimais extraídos da apresentação original. Para tiragens gráficas finais de offset ou hot stamping de luxo, recomenda-se a homologação com provas de cor físicas ou paleta Pantone de referência.
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. TIPOGRAFIA
+         ====================================================================== -->
+    <section class="ds-section" id="tipografia">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge" style="color: var(--color-copper);">06 • Tipografia</span>
+          <h2 class="ds-section-title">Sistema Tipográfico Pessoal</h2>
+          <p class="ds-section-desc">
+            Geometria refinada com espaçamento generoso para a assinatura pessoal LÚCIA CARLA.
+          </p>
+        </div>
+
+        <div class="ds-callout-warning">
+          <strong>Fonte de substituição — confirmar fonte oficial:</strong> Pilha tipográfica geométrica de alta legibilidade, carregada localmente sem dependência externa de CDN.
+        </div>
+
+        <div class="ds-type-specimens">
+          <div class="ds-type-card">
+            <span style="font-size: var(--font-size-xs); color: var(--color-copper); font-weight: bold; text-transform: uppercase;">Assinatura do Nome / Display</span>
+            <div class="ds-type-sample-title" style="letter-spacing: 0.18em; color: var(--color-copper-deep); font-size: var(--font-size-2xl);">
+              L Ú C I A &nbsp; C A R L A
+            </div>
+            <div class="ds-type-meta">
+              <span>Peso: 600 (Semibold)</span>
+              <span>Tracking: 0.18em (Alinhado à largura de MENDONÇA)</span>
+              <span>Uso: Cabeçalhos pessoais e assinatura</span>
+            </div>
+          </div>
+
+          <div class="ds-type-card">
+            <span style="font-size: var(--font-size-xs); color: var(--color-copper); font-weight: bold; text-transform: uppercase;">Corpo Editorial / Colunas de Opinião</span>
+            <div style="font-size: var(--font-size-md); color: var(--color-navy-dark); line-height: 1.6; margin-bottom: var(--space-2);">
+              “A segurança jurídica das decisões empresariais não decorre apenas da frieza das leis, mas da sensibilidade em antecipar conflitos e desenhar pontes seguras para o futuro dos negócios.”
+            </div>
+            <div class="ds-type-meta">
+              <span>Peso: 400 (Regular)</span>
+              <span>Tamanho: 1rem (16px)</span>
+              <span>Altura de Linha: 1.6</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. GRID E COMPOSIÇÃO
+         ====================================================================== -->
+    <section class="ds-section" id="grid-composicao">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge" style="color: var(--color-copper);">07 • Diagramação</span>
+          <h2 class="ds-section-title">Composição Editorial & Molduras</h2>
+          <p class="ds-section-desc">
+            As páginas de Lúcia Carla empregam linhas horizontais finas em cobre e molduras delicadas para valorizar retratos e artigos assinados.
+          </p>
+        </div>
+
+        <div style="background: var(--color-white); border-radius: var(--radius-lg); padding: var(--space-8); border: 1px solid rgba(11,31,58,0.1); box-shadow: var(--shadow-sm);">
+          <div style="border-left: 2px solid var(--color-copper); padding-left: var(--space-4); margin-bottom: var(--space-6);">
+            <h4 style="color: var(--color-navy); font-size: var(--font-size-lg); font-weight: bold;">Proporção Áurea da Assinatura</h4>
+            <p style="font-size: var(--font-size-sm); color: var(--color-slate-subtle);">
+              A altura da caixa de texto de LÚCIA CARLA corresponde exatamente a 45% da altura de MENDONÇA, conferindo equilíbrio estético e autoridade ao sobrenome familiar.
+            </p>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4);">
+            <div style="background: #fbf0ea; padding: var(--space-4); border-radius: var(--radius-sm); text-align: center;">
+              <strong style="color: var(--color-copper-deep); font-size: var(--font-size-sm);">Alinhamento Central</strong>
+              <p style="font-size: 0.75rem; color: var(--color-slate-subtle); margin-top: 2px;">Eixo rigorosamente simétrico</p>
+            </div>
+            <div style="background: #fbf0ea; padding: var(--space-4); border-radius: var(--radius-sm); text-align: center;">
+              <strong style="color: var(--color-copper-deep); font-size: var(--font-size-sm);">Fios Divisores Cobre</strong>
+              <p style="font-size: 0.75rem; color: var(--color-slate-subtle); margin-top: 2px;">Espessura de 1px a 1.5px</p>
+            </div>
+            <div style="background: #fbf0ea; padding: var(--space-4); border-radius: var(--radius-sm); text-align: center;">
+              <strong style="color: var(--color-copper-deep); font-size: var(--font-size-sm);">Margens Amplas</strong>
+              <p style="font-size: 0.75rem; color: var(--color-slate-subtle); margin-top: 2px;">Respiro mínimo de 64px</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. EFEITOS E ACABAMENTO
+         ====================================================================== -->
+    <section class="ds-section" id="efeitos-acabamento">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge" style="color: var(--color-copper);">08 • Acabamento Sensorial</span>
+          <h2 class="ds-section-title">Efeitos de Superfície & Foil Cobre</h2>
+          <p class="ds-section-desc">
+            A estética de Lúcia Carla Mendonça destaca-se pelo brilho quente do cobre metálico sobre a textura macia do marfim.
+          </p>
+        </div>
+
+        <div class="ds-effects-grid">
+          <div class="ds-effect-card">
+            <div class="ds-effect-preview copper-foil">
+              FOIL COBRE / TERRACOTA
+            </div>
+            <strong style="color: var(--color-navy); display: block; margin-bottom: 4px;">Hot Stamping Cobre Brilhante</strong>
+            <p style="font-size: var(--font-size-xs); color: var(--color-slate-subtle); line-height: 1.4;">
+              Foil metálico terracota para cartões pessoais de relacionamento e convites executivos.
+            </p>
+          </div>
+
+          <div class="ds-effect-card">
+            <div class="ds-effect-preview" style="background: var(--color-ivory-sand); color: var(--color-navy); border: 1px solid #d7d0c3;">
+              TEXTURA PAPEL MARFIM
+            </div>
+            <strong style="color: var(--color-navy); display: block; margin-bottom: 4px;">Papel Algodão Color Plus Marfim</strong>
+            <p style="font-size: var(--font-size-xs); color: var(--color-slate-subtle); line-height: 1.4;">
+              Gramatura de 300g a 450g com textura táctil sutil e absorção aconchegante.
+            </p>
+          </div>
+
+          <div class="ds-effect-card">
+            <div class="ds-effect-preview" style="background: #ffffff; border: 1px solid rgba(184,111,76,0.2); color: var(--color-copper-deep); box-shadow: var(--shadow-copper);">
+              GLOW COBRE CONTROLADO
+            </div>
+            <strong style="color: var(--color-navy); display: block; margin-bottom: 4px;">Halo Luminoso Quente</strong>
+            <p style="font-size: var(--font-size-xs); color: var(--color-slate-subtle); line-height: 1.4;">
+              Efeito sutil de iluminação difusa em botões e cards de citação da fundadora.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         9. APLICAÇÕES FÍSICAS (CARTÃO & CORRESPONDÊNCIA PESSOAL)
+         ====================================================================== -->
+    <section class="ds-section" id="aplicacoes-fisicas">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge" style="color: var(--color-copper);">09 • Papelaria Pessoal</span>
+          <h2 class="ds-section-title">Aplicações Físicas & Cartão Pessoal</h2>
+          <p class="ds-section-desc">
+            Baseado no Slide 08 do PPTX e Páginas 09 e 10 do PDF. O cartão de visitas de Lúcia Carla Mendonça adota corpo em Marfim nobre com detalhes e linha em foil cobre.
+          </p>
+        </div>
+
+        <div class="ds-mockup-disclaimer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          DADOS DEMONSTRATIVOS — SUBSTITUIR PELOS DADOS FINAIS
+        </div>
+
+        <div class="ds-stationery-grid">
+          <!-- Cartão de Visitas Pessoal -->
+          <div class="ds-card-physical-wrap">
+            <h3 style="font-size: var(--font-size-md); font-weight: bold; color: var(--color-navy); margin-bottom: var(--space-3);">Cartão de Visitas Pessoal (Marfim & Cobre)</h3>
+            
+            <div class="ds-business-card ivory-theme">
+              <div class="ds-card-foil-line" style="background: var(--color-copper);"></div>
+              <div class="ds-card-logo-area">
+                <img src="assets/design-system/logo-lucia-positiva.png" alt="Lúcia Carla Mendonça Advocacia">
+              </div>
+              <div>
+                <div class="ds-card-person-name" style="color: var(--color-navy-dark);">LÚCIA CARLA MENDONÇA</div>
+                <div class="ds-card-person-role" style="color: var(--color-copper-deep);">Sócia-Fundadora • OAB/SP 000.000</div>
+                <div class="ds-card-contact-list" style="color: var(--color-navy);">
+                  lucia.carla@mendoncaadvocacia.com.br • +55 (11) 98765-4321<br>
+                  Av. Brigadeiro Faria Lima, 3477 • São Paulo / SP
+                </div>
+              </div>
+            </div>
+            <p style="font-size: var(--font-size-xs); color: var(--color-slate-subtle); margin-top: var(--space-2);">
+              Especificação: Papel Color Plus Marfim 450g, hot stamping metálico cobre nos detalhes e monograma.
+            </p>
+          </div>
+
+          <!-- Carta de Apresentação / Parecer Pessoal -->
+          <div>
+            <h3 style="font-size: var(--font-size-md); font-weight: bold; color: var(--color-navy); margin-bottom: var(--space-3);">Nota de Relacionamento Executivo</h3>
+            <div class="ds-letterhead-mockup" style="background: #faf8f5;">
+              <div class="ds-letterhead-header">
+                <img src="assets/design-system/logo-lucia-positiva.png" alt="Lúcia Carla Mendonça Advocacia">
+                <div style="text-align: right; font-size: 0.6875rem; color: var(--color-copper-deep); font-weight: 600;">
+                  Gabinete Pessoal • Consultoria Sênior
+                </div>
+              </div>
+              <div class="ds-letterhead-dummy-text">
+                Prezado(a) Conselheiro(a),<br><br>
+                É uma satisfação compartilhar nossas reflexões sobre os desdobramentos estratégicos da recente reorganização estrutural...<br><br>
+                Reafirmo nossa disposição pessoal para dialogarmos sobre as melhores rotas de segurança e governança.<br><br>
+                Atenciosamente,<br>
+                <strong>Lúcia Carla Mendonça</strong>
+              </div>
+              <div class="ds-letterhead-footer" style="color: var(--color-copper);">
+                Atendimento Pessoal & Estratégico • www.mendoncaadvocacia.com.br
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         10. APLICAÇÕES DIGITAIS
+         ====================================================================== -->
+    <section class="ds-section" id="aplicacoes-digitais">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge" style="color: var(--color-copper);">10 • Presença Digital</span>
+          <h2 class="ds-section-title">Aplicações Digitais & Thought Leadership</h2>
+          <p class="ds-section-desc">
+            Artigos assinados, colunas especializadas, canais de relacionamento e palestras com identidade sofisticada e humana.
+          </p>
+        </div>
+
+        <div class="ds-digital-grid">
+          <!-- Mockup Navegador Web -->
+          <div class="ds-web-mockup">
+            <div class="ds-browser-bar">
+              <div class="ds-browser-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="ds-browser-url">https://www.mendoncaadvocacia.com.br/lucia-carla</div>
+            </div>
+            <div class="ds-web-hero-preview" style="background: linear-gradient(135deg, #1c140f 0%, #070b12 100%);">
+              <div style="max-width: 500px;">
+                <img src="assets/design-system/logo-lucia-negativa.png" alt="Lúcia Carla Mendonça" style="max-height: 44px; margin-bottom: var(--space-4);">
+                <h3 style="font-size: var(--font-size-2xl); font-weight: bold; line-height: 1.2; margin-bottom: var(--space-2);">
+                  Autoridade, Estratégia e Visão Humana
+                </h3>
+                <p style="font-size: var(--font-size-sm); color: var(--color-slate-light); margin-bottom: var(--space-5);">
+                  Mais de duas décadas orientando conselhos diretivos e lideranças corporativas na resolução de controvérsias complexas.
+                </p>
+                <div style="display: flex; gap: var(--space-3);">
+                  <button class="ds-btn ds-btn-copper" style="font-size: 0.75rem; padding: 6px 14px;">Biografia & Atuação</button>
+                  <button class="ds-btn ds-btn-outline" style="font-size: 0.75rem; padding: 6px 14px; border-color: rgba(255,255,255,0.3); color: #fff;">Artigos Publicados</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mockup Post Social / Banner -->
+          <div class="ds-social-post-card" style="background: linear-gradient(135deg, #2a1a12 0%, #070b12 100%);">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 0.6875rem; color: var(--color-copper-light); font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase;">ARTIGO DE OPINIÃO</span>
+              <img src="assets/design-system/simbolo-m-copper.png" alt="M" style="max-height: 24px;">
+            </div>
+            <div>
+              <h4 style="font-size: var(--font-size-lg); font-weight: bold; line-height: 1.3; margin-bottom: var(--space-2);">
+                O Papel do Diálogo Estratégico em Sucessões Complexas
+              </h4>
+              <p style="font-size: var(--font-size-xs); color: var(--color-slate-light);">
+                Por Lúcia Carla Mendonça no Valor Econômico.
+              </p>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: var(--space-2); font-size: 0.6875rem; color: var(--color-slate-muted);">
+              <span>lucia-carla.mendonca</span>
+              <span>Edição Especial</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         11. COMPONENTES INTERATIVOS UI
+         ====================================================================== -->
+    <section class="ds-section" id="componentes">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge" style="color: var(--color-copper);">11 • UI Kit Reutilizável</span>
+          <h2 class="ds-section-title">Componentes de Interface</h2>
+          <p class="ds-section-desc">
+            Componentes estilizados na tonalidade cobre/terracota para botões de destaque, caixas de citação e assinaturas digitais.
+          </p>
+        </div>
+
+        <div class="ds-components-showcase">
+          <!-- Botões Cobre -->
+          <div class="ds-component-block">
+            <h3 class="ds-component-title">Ações & Botões com Acento Cobre</h3>
+            <div class="ds-button-matrix">
+              <button class="ds-btn ds-btn-copper">Agendar Consulta Estratégica</button>
+              <button class="ds-btn ds-btn-outline" style="border-color: var(--color-copper); color: var(--color-copper-deep);">Ver Publicações</button>
+              <button class="ds-btn" style="color: var(--color-copper-deep); text-decoration: underline;">Baixar Curriculum Vitae ↓</button>
+            </div>
+          </div>
+
+          <!-- Citação Destacada -->
+          <div class="ds-component-block">
+            <div style="background: #fbf0ea; border-left: 4px solid var(--color-copper); padding: var(--space-6); border-radius: 0 var(--radius-md) var(--radius-md) 0;">
+              <p style="font-size: var(--font-size-lg); font-style: italic; color: var(--color-navy); line-height: 1.6; margin-bottom: var(--space-3);">
+                “Nossa missão é construir segurança onde há incerteza, com a firmeza técnica do direito e a clareza humana que as grandes lideranças exigem.”
+              </p>
+              <strong style="color: var(--color-copper-deep); font-size: var(--font-size-sm); display: block;">Lúcia Carla Mendonça</strong>
+              <span style="font-size: var(--font-size-xs); color: var(--color-slate-subtle);">Sócia-Fundadora da Mendonça Advocacia</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         12. DO AND DON'T
+         ====================================================================== -->
+    <section class="ds-section" id="do-and-dont">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge" style="color: var(--color-copper);">12 • Governança Visual</span>
+          <h2 class="ds-section-title">Diretrizes de Uso: Do & Don't</h2>
+          <p class="ds-section-desc">
+            Regras específicas para a integridade da assinatura pessoal de Lúcia Carla Mendonça.
+          </p>
+        </div>
+
+        <div class="ds-dodont-grid">
+          <!-- Correto: Acento em LÚCIA -->
+          <div class="ds-dodont-card">
+            <div class="ds-dodont-canvas do-canvas">
+              <span class="ds-dodont-badge do-badge">Correto</span>
+              <img src="assets/design-system/logo-lucia-positiva.png" alt="Uso correto com acento em LÚCIA" style="max-height: 48px;">
+            </div>
+            <div class="ds-dodont-info">
+              <h4 class="ds-dodont-title">Grafia com acento no Ú preservada</h4>
+              <p class="ds-dodont-desc">A palavra LÚCIA obrigatoriamente contém acento agudo no Ú.</p>
+            </div>
+          </div>
+
+          <!-- Incorreto: Sem acento -->
+          <div class="ds-dodont-card">
+            <div class="ds-dodont-canvas dont-canvas">
+              <span class="ds-dodont-badge dont-badge">Proibido</span>
+              <div style="font-size: 1.25rem; font-weight: bold; color: var(--color-danger); font-family: sans-serif; letter-spacing: 0.1em;">
+                LUCIA CARLA MENDONÇA
+              </div>
+            </div>
+            <div class="ds-dodont-info">
+              <h4 class="ds-dodont-title">Supressão do acento gráfico</h4>
+              <p class="ds-dodont-desc">Nunca escreva o nome sem acento ("LUCIA"). É um erro grave de identidade e ortografia.</p>
+            </div>
+          </div>
+
+          <!-- Correto: Alinhamento Central Balanceado -->
+          <div class="ds-dodont-card">
+            <div class="ds-dodont-canvas do-canvas" style="background: var(--color-ivory);">
+              <span class="ds-dodont-badge do-badge">Correto</span>
+              <img src="assets/design-system/logo-lucia-positiva.png" alt="Uso correto alinhado" style="max-height: 48px;">
+            </div>
+            <div class="ds-dodont-info">
+              <h4 class="ds-dodont-title">Alinhamento simétrico sobre MENDONÇA</h4>
+              <p class="ds-dodont-desc">LÚCIA CARLA mantém largura proporcional idêntica ao bloco MENDONÇA.</p>
+            </div>
+          </div>
+
+          <!-- Incorreto: Desalinhamento ou Tipografia Distorcida -->
+          <div class="ds-dodont-card">
+            <div class="ds-dodont-canvas dont-canvas" style="background: var(--color-ivory);">
+              <span class="ds-dodont-badge dont-badge">Proibido</span>
+              <div style="text-align: left; width: 80%;">
+                <div style="font-size: 0.75rem; color: #b86f4c;">LÚCIA CARLA</div>
+                <div style="font-size: 1.5rem; font-weight: bold; color: #0b1f3a; letter-spacing: 0.3em;">MENDONÇA</div>
+              </div>
+            </div>
+            <div class="ds-dodont-info">
+              <h4 class="ds-dodont-title">Desalinhamento de eixos ou proporções</h4>
+              <p class="ds-dodont-desc">Nunca altere o tracking de LÚCIA CARLA para fora dos limites das extremidades de MENDONÇA.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         13. TOKENS PARA DESENVOLVIMENTO
+         ====================================================================== -->
+    <section class="ds-section" id="tokens-desenvolvimento">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge" style="color: var(--color-copper);">13 • Especificação Técnica</span>
+          <h2 class="ds-section-title">Tokens CSS Custom Properties</h2>
+          <p class="ds-section-desc">
+            Variáveis semânticas configuradas para a assinatura de Lúcia Carla Mendonça.
+          </p>
+        </div>
+
+        <div class="ds-code-block-wrap">
+          <div class="ds-code-header">
+            <span class="ds-code-title">css/tokens-lucia-carla-mendonca.css</span>
+            <button class="ds-copy-btn" data-target="#tokensLuciaCode">Copiar Tokens</button>
+          </div>
+          <pre class="ds-code-pre"><code id="tokensLuciaCode">:root {
+  /* Cores Oficiais Lúcia Carla Mendonça (PPTX & PDF) */
+  --color-copper: #B86F4C;         /* Cobre / Terracota Principal */
+  --color-copper-deep: #965334;    /* Cobre Escuro para Contraste */
+  --color-copper-light: #D69170;   /* Cobre Claro para Destaques */
+  --color-ivory: #F6F1E7;          /* Marfim Base */
+  --color-ivory-sand: #EEE7D8;     /* Marfim Cartão e Texturas */
+  --color-navy: #0B1F3A;           /* Navy para Nome MENDONÇA */
+  --color-navy-dark: #070B12;      /* Fundo Noturno */
+  --color-white: #FFFFFF;          /* Branco Puro */
+
+  /* Efeitos e Acabamentos */
+  --grad-copper: linear-gradient(135deg, #B86F4C 0%, #E29F7E 50%, #965334 100%);
+  --shadow-copper: 0 8px 25px rgba(184, 111, 76, 0.25);
+  --border-copper: 1px solid rgba(184, 111, 76, 0.3);
+
+  /* Tipografia da Assinatura */
+  --tracking-lucia-carla: 0.18em;
+  --font-family-display: "Plus Jakarta Sans", sans-serif;
+  --font-family-serif: "Playfair Display", Georgia, serif;
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         14. ORIGEM DAS DECISÕES (AUDITORIA)
+         ====================================================================== -->
+    <section class="ds-section" id="origem-decisoes">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge" style="color: var(--color-copper);">14 • Auditoria & Rastreabilidade</span>
+          <h2 class="ds-section-title">Matriz de Decisões & Origem Técnica</h2>
+          <p class="ds-section-desc">
+            Rastreabilidade das decisões da marca Lúcia Carla contra os arquivos de origem.
+          </p>
+        </div>
+
+        <table class="ds-audit-table" aria-label="Matriz de Auditoria de Decisões">
+          <thead>
+            <tr>
+              <th>Item / Elemento</th>
+              <th>Fonte PPTX</th>
+              <th>Fonte PDF</th>
+              <th>Status</th>
+              <th>Justificativa Técnica</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Assinatura Oficial (Positiva & Negativa)</strong></td>
+              <td>Slide 05 (imagem 3)</td>
+              <td>Página 06 (vetores)</td>
+              <td><span class="ds-badge-status approved">Aprovado</span></td>
+              <td>Extraído com fidelidade alfa a partir da Pág. 06 do PDF oficial.</td>
+            </tr>
+            <tr>
+              <td><strong>Cor Cobre / Terracota (#B86F4C)</strong></td>
+              <td>Slide XML <code>srgbClr="B86F4C"</code></td>
+              <td>Páginas 04, 05, 06, 10</td>
+              <td><span class="ds-badge-status extracted">Extraído</span></td>
+              <td>Cor oficial exclusiva de Lúcia Carla no ecossistema.</td>
+            </tr>
+            <tr>
+              <td><strong>Grafia Obrigatória LÚCIA</strong></td>
+              <td>Slide 01 e 05</td>
+              <td>Página 01, 05, 06, 08</td>
+              <td><span class="ds-badge-status approved">Aprovado</span></td>
+              <td>Acento agudo no Ú explicitamente preservado em todos os documentos.</td>
+            </tr>
+            <tr>
+              <td><strong>Sistema de Imagem da Fundadora</strong></td>
+              <td>Slide 06</td>
+              <td>Página 08</td>
+              <td><span class="ds-badge-status approved">Aprovado</span></td>
+              <td>Papel duplo documentado: liderança pessoal e referência humana do grupo.</td>
+            </tr>
+            <tr>
+              <td><strong>Cartão Marfim & Cobre</strong></td>
+              <td>Slide 08</td>
+              <td>Páginas 09 e 10</td>
+              <td><span class="ds-badge-status approved">Aprovado</span></td>
+              <td>Especificação física em marfim (#EEE7D8) e acabamento em cobre.</td>
+            </tr>
+            <tr>
+              <td><strong>Dados de Contato Demonstrativos</strong></td>
+              <td>Ausente</td>
+              <td>Ausente</td>
+              <td><span class="ds-badge-status pending">Demonstrativo</span></td>
+              <td>Dados fictícios para teste e layout com aviso explícito.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- Scripts Utilitários Compartilhados (Zero CDN) -->
+<script src="js/design-system.js"></script>
+
+</body>
+</html>

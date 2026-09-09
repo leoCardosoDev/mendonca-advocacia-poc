@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System | Mendonça Advocacia - Marca Institucional & Guarda-chuva</title>
+  <meta name="description" content="Manual de Identidade Visual e Design System Oficial da Mendonça Advocacia. Diretrizes da marca guarda-chuva, tokens CSS, componentes, regras de logotipo e governança.">
+  
+  <!-- Estilos do Design System (Carregamento Local Autônomo) -->
+  <link rel="stylesheet" href="css/design-system.css">
+  
+  <!-- Cores e Variáveis Customizadas desta Marca -->
+  <style>
+    :root {
+      --brand-primary: var(--color-navy);
+      --brand-accent: var(--color-gold);
+      --brand-accent-hover: var(--color-gold-deep);
+      --brand-hero-bg: linear-gradient(135deg, #05080e 0%, #070b12 40%, #0b1f3a 100%);
+      --brand-glow: rgba(212, 167, 44, 0.16);
+      --card-accent: var(--color-gold);
+    }
+  </style>
+</head>
+<body>
+
+<div class="ds-app">
+  
+  <!-- BARRA MOBILE -->
+  <header class="ds-mobile-bar" role="banner">
+    <div class="ds-mobile-logo-wrap">
+      <img src="assets/design-system/logo-mendonca-negativa.png" alt="Mendonça Advocacia" class="ds-mobile-logo">
+    </div>
+    <button class="ds-mobile-toggle" aria-label="Abrir Menu de Navegação" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <!-- SIDEBAR FIXA -->
+  <aside class="ds-sidebar" role="navigation" aria-label="Navegação do Design System">
+    <div class="ds-sidebar-brand">
+      <span class="ds-sidebar-ecosystem-tag">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor" aria-hidden="true"><circle cx="5" cy="5" r="4"/></svg>
+        Marca Institucional
+      </span>
+      <a href="#capa" class="ds-sidebar-logo-link" aria-label="Voltar para a Capa">
+        <img src="assets/design-system/logo-mendonca-negativa.png" alt="Mendonça Advocacia" class="ds-sidebar-logo">
+      </a>
+      <div class="ds-sidebar-doc-meta">
+        <strong>Brand System v1.0</strong><br>
+        Atualização: Setembro/2026<br>
+        Origem: PPTX & PDF Oficial
+      </div>
+    </div>
+
+    <!-- Índice de Navegação com 14 Seções -->
+    <nav class="ds-sidebar-nav">
+      <div class="ds-nav-section-title">Diretrizes da Marca</div>
+      <ul class="ds-nav-list">
+        <li class="ds-nav-item"><a href="#capa" class="ds-nav-link active"><span class="ds-nav-num">01</span> Capa & Visão Geral</a></li>
+        <li class="ds-nav-item"><a href="#papel-marca" class="ds-nav-link"><span class="ds-nav-num">02</span> Papel no Ecossistema</a></li>
+        <li class="ds-nav-item"><a href="#dna-compartilhado" class="ds-nav-link"><span class="ds-nav-num">03</span> DNA Compartilhado</a></li>
+        <li class="ds-nav-item"><a href="#identidade-individual" class="ds-nav-link"><span class="ds-nav-num">04</span> Identidade Individual</a></li>
+        <li class="ds-nav-item"><a href="#sistema-cores" class="ds-nav-link"><span class="ds-nav-num">05</span> Sistema de Cores</a></li>
+        <li class="ds-nav-item"><a href="#tipografia" class="ds-nav-link"><span class="ds-nav-num">06</span> Tipografia</a></li>
+        <li class="ds-nav-item"><a href="#grid-composicao" class="ds-nav-link"><span class="ds-nav-num">07</span> Grid & Composição</a></li>
+        <li class="ds-nav-item"><a href="#efeitos-acabamento" class="ds-nav-link"><span class="ds-nav-num">08</span> Efeitos & Acabamento</a></li>
+        <li class="ds-nav-item"><a href="#aplicacoes-fisicas" class="ds-nav-link"><span class="ds-nav-num">09</span> Aplicações Físicas</a></li>
+        <li class="ds-nav-item"><a href="#aplicacoes-digitais" class="ds-nav-link"><span class="ds-nav-num">10</span> Aplicações Digitais</a></li>
+        <li class="ds-nav-item"><a href="#componentes" class="ds-nav-link"><span class="ds-nav-num">11</span> Componentes UI</a></li>
+        <li class="ds-nav-item"><a href="#do-and-dont" class="ds-nav-link"><span class="ds-nav-num">12</span> Do & Don't</a></li>
+        <li class="ds-nav-item"><a href="#tokens-desenvolvimento" class="ds-nav-link"><span class="ds-nav-num">13</span> Tokens CSS</a></li>
+        <li class="ds-nav-item"><a href="#origem-decisoes" class="ds-nav-link"><span class="ds-nav-num">14</span> Origem das Decisões</a></li>
+      </ul>
+    </nav>
+
+    <!-- Switcher do Ecossistema -->
+    <div class="ds-sidebar-footer">
+      <div class="ds-sidebar-footer-title">Ecossistema de Marcas</div>
+      <div class="ds-ecosystem-links">
+        <a href="design-system-mendonca-advocacia.html" class="ds-ecosystem-item current">
+          <span>Mendonça Advocacia</span>
+          <small>Institucional</small>
+        </a>
+        <a href="design-system-lucia-carla-mendonca.html" class="ds-ecosystem-item">
+          <span>Lúcia Carla Mendonça</span>
+          <small>Profissional</small>
+        </a>
+        <a href="design-system-clinica-geral-da-advocacia.html" class="ds-ecosystem-item">
+          <span>Clínica Geral da Advocacia</span>
+          <small>Serviço</small>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="ds-main" id="mainContent" role="main">
+
+    <!-- ======================================================================
+         1. CAPA / HERO
+         ====================================================================== -->
+    <section class="ds-hero" id="capa">
+      <div class="ds-container">
+        <div class="ds-hero-inner">
+          <div class="ds-hero-content">
+            <span class="ds-hero-meta-badge">Design System Oficial • v1.0</span>
+            <h1 class="ds-hero-title">Mendonça Advocacia</h1>
+            <p class="ds-hero-subtitle">
+              A marca institucional e guarda-chuva do ecossistema Mendonça. Fundamentada em autoridade corporativa, credibilidade técnica, estabilidade jurídica e visão de grupo para proteger interesses de alta relevância.
+            </p>
+            <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+              <a href="#identidade-individual" class="ds-btn ds-btn-gold">Explorar Identidade</a>
+              <a href="#tokens-desenvolvimento" class="ds-btn ds-btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;">Ver Tokens CSS</a>
+            </div>
+          </div>
+
+          <div class="ds-hero-card">
+            <div class="ds-hero-card-logo-wrap">
+              <img src="assets/design-system/logo-mendonca-negativa.png" alt="Logotipo Oficial Mendonça Advocacia (Versão Negativa)" class="ds-hero-card-logo">
+            </div>
+            <div class="ds-hero-specs-grid">
+              <div class="ds-hero-spec-item">
+                <span class="ds-hero-spec-label">Papel</span>
+                <span class="ds-hero-spec-value">Guarda-chuva</span>
+              </div>
+              <div class="ds-hero-spec-item">
+                <span class="ds-hero-spec-label">Âncora</span>
+                <span class="ds-hero-spec-value">Deep Navy</span>
+              </div>
+              <div class="ds-hero-spec-item">
+                <span class="ds-hero-spec-label">Acento</span>
+                <span class="ds-hero-spec-value">Gold Foil</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. PAPEL DA MARCA & ECOSSISTEMA
+         ====================================================================== -->
+    <section class="ds-section" id="papel-marca">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge">02 • Arquitetura de Marca</span>
+          <h2 class="ds-section-title">Papel no Ecossistema</h2>
+          <p class="ds-section-desc">
+            A arquitetura endossada distribui funções sem romper a confiança construída em torno do nome Mendonça. Como marca-mãe, a Mendonça Advocacia ancora as operações institucionais e outorga respaldo ético e solidez a todas as frentes de atuação.
+          </p>
+        </div>
+
+        <div class="ds-ecosystem-cards">
+          <!-- Card Institucional (Ativo) -->
+          <div class="ds-card-role is-active-brand">
+            <span class="ds-card-role-badge" style="background: var(--color-gold); color: var(--color-navy-dark);">Marca Guarda-Chuva</span>
+            <h3 class="ds-card-role-title">Mendonça Advocacia</h3>
+            <p style="font-size: var(--font-size-xs); color: var(--color-gold-deep); font-weight: 600;">INSTITUCIONAL</p>
+            <div class="ds-card-role-anchors">
+              <span class="ds-tag">Estrutura</span>
+              <span class="ds-tag">Credibilidade</span>
+              <span class="ds-tag">Solidez</span>
+              <span class="ds-tag">Visão de Grupo</span>
+            </div>
+            <p class="ds-card-role-desc">
+              Responsável por negócios corporativos, litígios estratégicos em tribunais superiores e grandes contratos. Representa a estrutura perene e a chancela jurídica do escritório.
+            </p>
+          </div>
+
+          <!-- Card Profissional -->
+          <div class="ds-card-role">
+            <span class="ds-card-role-badge" style="background: var(--color-copper); color: var(--color-white);">Marca Pessoal</span>
+            <h3 class="ds-card-role-title">Lúcia Carla Mendonça</h3>
+            <p style="font-size: var(--font-size-xs); color: var(--color-copper); font-weight: 600;">PROFISSIONAL</p>
+            <div class="ds-card-role-anchors">
+              <span class="ds-tag">Autoridade Pessoal</span>
+              <span class="ds-tag">Proximidade</span>
+              <span class="ds-tag">Liderança</span>
+            </div>
+            <p class="ds-card-role-desc">
+              A presença humana, a assinatura de liderança e a relação direta de confiança com clientes de alta relevância e posições executivas.
+            </p>
+          </div>
+
+          <!-- Card Serviço -->
+          <div class="ds-card-role">
+            <span class="ds-card-role-badge" style="background: var(--color-navy); color: var(--color-white);">Marca de Serviço</span>
+            <h3 class="ds-card-role-title">Clínica Geral da Advocacia</h3>
+            <p style="font-size: var(--font-size-xs); color: var(--color-navy); font-weight: 600;">SERVIÇO & ACESSO</p>
+            <div class="ds-card-role-anchors">
+              <span class="ds-tag">Diagnóstico</span>
+              <span class="ds-tag">Acesso</span>
+              <span class="ds-tag">Orientação</span>
+            </div>
+            <p class="ds-card-role-desc">
+              Orientação jurídica preventiva, triagem e resolução ágil. Linguagem descomplicada e direta para o dia a dia de pessoas e empresas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. DNA COMPARTILHADO
+         ====================================================================== -->
+    <section class="ds-section" id="dna-compartilhado">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge">03 • Origem Visual Comum</span>
+          <h2 class="ds-section-title">DNA Compartilhado</h2>
+          <p class="ds-section-desc">
+            A mesma origem, com expressões próprias. O sistema compartilha códigos rigorosos para gerar reconhecimento imediato, garantindo consistência em qualquer canal.
+          </p>
+        </div>
+
+        <div class="ds-dna-grid">
+          <div class="ds-symbol-showcase">
+            <div class="ds-symbol-img-wrap">
+              <img src="assets/design-system/simbolo-m-gold.png" alt="Símbolo Oficial M com Portais Dourados Abertos">
+            </div>
+            <h3 style="font-size: var(--font-size-xl); margin-bottom: var(--space-2); color: var(--color-gold);">O Símbolo Monograma “M”</h3>
+            <p style="font-size: var(--font-size-sm); color: var(--color-slate-light); line-height: 1.6;">
+              O símbolo oficial une precisão arquitetônica a um conceito espacial: a estrutura aberta do monograma evoca <strong>caminho, portal e proteção</strong>. O centro aberto com planos em perspectiva dourada simboliza portas que acolhem e orientam com segurança jurídica.
+            </p>
+          </div>
+
+          <div class="ds-dna-list">
+            <div class="ds-dna-item">
+              <div class="ds-dna-item-title">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="var(--color-gold)"><rect width="16" height="16" rx="3"/></svg>
+                Geometria Contemporânea e Legível
+              </div>
+              <div class="ds-dna-item-desc">
+                Linhas limpas, ângulos calibrados e proporções clássicas que equilibram autoridade tradicional e estética do direito contemporâneo.
+              </div>
+            </div>
+
+            <div class="ds-dna-item">
+              <div class="ds-dna-item-title">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="var(--color-navy)"><rect width="16" height="16" rx="3"/></svg>
+                Contraste entre Superfícies Claras e Escuras
+              </div>
+              <div class="ds-dna-item-desc">
+                A alternância calculada entre a profundidade do Navy escuro e a elegância do Marfim/Branco estabelece hierarquia e respiro visual.
+              </div>
+            </div>
+
+            <div class="ds-dna-item">
+              <div class="ds-dna-item-title">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="var(--color-gold-deep)"><rect width="16" height="16" rx="3"/></svg>
+                Dourado como Assinatura Premium
+              </div>
+              <div class="ds-dna-item-desc">
+                Linhas finas, traços divisores e hot stamping em dourado enriquecem a experiência física e digital sem excessos ou ostentação.
+              </div>
+            </div>
+
+            <div class="ds-dna-item">
+              <div class="ds-dna-item-title">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="var(--color-slate-subtle)"><rect width="16" height="16" rx="3"/></svg>
+                Vazados Tipográficos Intactos
+              </div>
+              <div class="ds-dna-item-desc">
+                Obrigatória preservação dos contraespaços internos abertos nas letras <strong>D, O e A</strong> em qualquer aplicação ou vetorização.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. IDENTIDADE INDIVIDUAL: LOGO SYSTEM
+         ====================================================================== -->
+    <section class="ds-section" id="identidade-individual">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge">04 • Logo System Oficial</span>
+          <h2 class="ds-section-title">Identidade Individual & Versões do Logotipo</h2>
+          <p class="ds-section-desc">
+            Extraídos diretamente da Página 06 do PDF oficial. A logo oficial da Mendonça Advocacia combina o monograma M com a barra vertical divisora, o nome institucional e a chancela de área.
+          </p>
+        </div>
+
+        <div class="ds-logo-versions-grid">
+          <!-- 01 Positiva -->
+          <div class="ds-logo-display-card">
+            <div class="ds-logo-canvas light-bg">
+              <img src="assets/design-system/logo-mendonca-positiva.png" alt="Logotipo Mendonça Advocacia Positivo sobre Fundo Marfim">
+            </div>
+            <div class="ds-logo-info">
+              <h3 class="ds-logo-info-title">01 • Versão Positiva (Principal)</h3>
+              <p class="ds-logo-info-desc">
+                Aplicação sobre fundos claros (marfim, branco, gelo). Símbolo em Navy com facetas douradas, barra e chancela ADVOCACIA em ouro, nome MENDONÇA em Navy.
+              </p>
+            </div>
+          </div>
+
+          <!-- 02 Negativa -->
+          <div class="ds-logo-display-card">
+            <div class="ds-logo-canvas dark-bg">
+              <img src="assets/design-system/logo-mendonca-negativa.png" alt="Logotipo Mendonça Advocacia Negativo sobre Fundo Navy">
+            </div>
+            <div class="ds-logo-info">
+              <h3 class="ds-logo-info-title">02 • Versão Negativa (Alto Contraste)</h3>
+              <p class="ds-logo-info-desc">
+                Aplicação obrigatória sobre fundos escuros (navy profundo, preto ou superfícies de baixa luminosidade). Elementos em branco puro e alto contraste.
+              </p>
+            </div>
+          </div>
+
+          <!-- 03 Monocromática -->
+          <div class="ds-logo-display-card">
+            <div class="ds-logo-canvas mono-bg">
+              <img src="assets/design-system/logo-mendonca-mono.png" alt="Logotipo Mendonça Advocacia Monocromático 1 Cor">
+            </div>
+            <div class="ds-logo-info">
+              <h3 class="ds-logo-info-title">03 • Versão Monocromática (1 Cor)</h3>
+              <p class="ds-logo-info-desc">
+                Para processos técnicos, carimbos notariais, formulários fiscais, gravação a laser e impressões monocromáticas em escala de cinza ou tinta única Navy.
+              </p>
+            </div>
+          </div>
+
+          <!-- 04 Reduzida -->
+          <div class="ds-logo-display-card">
+            <div class="ds-logo-canvas dark-bg" style="gap: var(--space-8);">
+              <img src="assets/design-system/simbolo-m-gold.png" alt="Símbolo M Dourado Isolado" style="max-height: 70px;">
+              <img src="assets/design-system/simbolo-m-negativo.png" alt="Símbolo M Negativo Isolado" style="max-height: 70px;">
+            </div>
+            <div class="ds-logo-info">
+              <h3 class="ds-logo-info-title">04 • Versão Reduzida (Símbolo Isolado)</h3>
+              <p class="ds-logo-info-desc">
+                Utilizado quando o espaço for menor que 120px: favicons, fotos de perfil em mídias sociais, selos de cera, botões de punho e microaplicações.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Área de Proteção e Tamanhos Mínimos -->
+        <div class="ds-protection-grid">
+          <div class="ds-protection-box">
+            <h3 style="font-size: var(--font-size-md); font-weight: bold; margin-bottom: var(--space-3); color: var(--color-navy);">Área de Proteção (Respiro Mínimo)</h3>
+            <div class="ds-safe-area-visual">
+              <img src="assets/design-system/logo-mendonca-positiva.png" alt="Demonstração de Área de Proteção da Logo">
+            </div>
+            <p style="font-size: var(--font-size-xs); color: var(--color-slate-subtle); line-height: 1.5;">
+              Nenhum texto, linha, fotografia ou outro elemento gráfico pode invadir o perímetro de proteção <strong>X</strong> (equivalente à largura da coluna vertical da letra M).
+            </p>
+          </div>
+
+          <div class="ds-protection-box">
+            <h3 style="font-size: var(--font-size-md); font-weight: bold; margin-bottom: var(--space-3); color: var(--color-navy);">Dimensões Mínimas Recomendadas</h3>
+            <div style="display: flex; flex-direction: column; gap: var(--space-4); margin-top: var(--space-4);">
+              <div style="padding: var(--space-3); background: #f8fafc; border-radius: var(--radius-sm); border: 1px solid #e2e8f0;">
+                <strong>Digital / Telas:</strong>
+                <p style="font-size: var(--font-size-xs); color: var(--color-slate-subtle); margin-top: 2px;">
+                  Logo Completa: Mínimo <strong>140px</strong> de largura.<br>
+                  Símbolo M isolado: Mínimo <strong>24px × 24px</strong> (Favicon: 16px × 16px).
+                </p>
+              </div>
+              <div style="padding: var(--space-3); background: #f8fafc; border-radius: var(--radius-sm); border: 1px solid #e2e8f0;">
+                <strong>Mídia Impressa:</strong>
+                <p style="font-size: var(--font-size-xs); color: var(--color-slate-subtle); margin-top: 2px;">
+                  Logo Completa: Mínimo <strong>38 mm</strong> de largura.<br>
+                  Símbolo M isolado: Mínimo <strong>8 mm</strong> de altura.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. SISTEMA DE CORES
+         ====================================================================== -->
+    <section class="ds-section" id="sistema-cores">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge">05 • Paleta Cromática</span>
+          <h2 class="ds-section-title">Sistema de Cores Oficiais</h2>
+          <p class="ds-section-desc">
+            Cores extraídas com precisão técnica dos atributos XML <code>srgbClr</code> do PPTX e contrastes confirmados no PDF oficial. Clique no código para copiar instantaneamente o valor HEX.
+          </p>
+        </div>
+
+        <table class="ds-color-table" aria-label="Tabela de Cores do Design System">
+          <thead>
+            <tr>
+              <th>Amostra & Nome</th>
+              <th>Token CSS</th>
+              <th>HEX</th>
+              <th>RGB</th>
+              <th>CMYK (Est.)</th>
+              <th>Função / Contexto</th>
+              <th>Contraste</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="ds-swatch-cell">
+                  <div class="ds-swatch-box" style="background: #070b12;"></div>
+                  <div><strong>Navy Dark (Ink)</strong></div>
+                </div>
+              </td>
+              <td><code>--color-navy-dark</code></td>
+              <td><button class="ds-copyable-code" data-copy="#070B12" title="Clique para copiar">#070B12</button></td>
+              <td>7, 11, 18</td>
+              <td>85, 75, 55, 78</td>
+              <td>Fundo principal escuro, capas institucionais, solidez</td>
+              <td><span class="ds-contrast-pill pass">AAA (19.4:1)</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ds-swatch-cell">
+                  <div class="ds-swatch-box" style="background: #0b1f3a;"></div>
+                  <div><strong>Navy Profundo</strong></div>
+                </div>
+              </td>
+              <td><code>--color-navy</code></td>
+              <td><button class="ds-copyable-code" data-copy="#0B1F3A" title="Clique para copiar">#0B1F3A</button></td>
+              <td>11, 31, 58</td>
+              <td>90, 72, 40, 52</td>
+              <td>Cor âncora da marca, tipografia em fundos claros, botões</td>
+              <td><span class="ds-contrast-pill pass">AAA (14.2:1)</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ds-swatch-cell">
+                  <div class="ds-swatch-box" style="background: #d4a72c;"></div>
+                  <div><strong>Gold Oficial</strong></div>
+                </div>
+              </td>
+              <td><code>--color-gold</code></td>
+              <td><button class="ds-copyable-code" data-copy="#D4A72C" title="Clique para copiar">#D4A72C</button></td>
+              <td>212, 167, 44</td>
+              <td>18, 32, 95, 2</td>
+              <td>Assinatura de sofisticação, foil, molduras, destaques</td>
+              <td><span class="ds-contrast-pill pass">AA (8.1:1 s/ Navy)</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ds-swatch-cell">
+                  <div class="ds-swatch-box" style="background: #b88a18;"></div>
+                  <div><strong>Gold Deep</strong></div>
+                </div>
+              </td>
+              <td><code>--color-gold-deep</code></td>
+              <td><button class="ds-copyable-code" data-copy="#B88A18" title="Clique para copiar">#B88A18</button></td>
+              <td>184, 138, 24</td>
+              <td>24, 40, 100, 10</td>
+              <td>Bordas de foil, estados de hover, sombra metálica</td>
+              <td><span class="ds-contrast-pill pass">AA (6.3:1)</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ds-swatch-cell">
+                  <div class="ds-swatch-box" style="background: #f6f1e7;"></div>
+                  <div><strong>Ivory Base</strong></div>
+                </div>
+              </td>
+              <td><code>--color-ivory</code></td>
+              <td><button class="ds-copyable-code" data-copy="#F6F1E7" title="Clique para copiar">#F6F1E7</button></td>
+              <td>246, 241, 231</td>
+              <td>3, 4, 8, 0</td>
+              <td>Superfície clara nobre, papelaria, respiro visual</td>
+              <td><span class="ds-contrast-pill pass">AAA (13.8:1 s/ Navy)</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ds-swatch-cell">
+                  <div class="ds-swatch-box" style="background: #ffffff;"></div>
+                  <div><strong>White Puro</strong></div>
+                </div>
+              </td>
+              <td><code>--color-white</code></td>
+              <td><button class="ds-copyable-code" data-copy="#FFFFFF" title="Clique para copiar">#FFFFFF</button></td>
+              <td>255, 255, 255</td>
+              <td>0, 0, 0, 0</td>
+              <td>Tipografia negativa, documentos timbrados, cartões</td>
+              <td><span class="ds-contrast-pill pass">AAA (19.4:1 s/ Navy)</span></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="ds-swatch-cell">
+                  <div class="ds-swatch-box" style="background: #47617c;"></div>
+                  <div><strong>Slate Muted</strong></div>
+                </div>
+              </td>
+              <td><code>--color-slate-muted</code></td>
+              <td><button class="ds-copyable-code" data-copy="#47617C" title="Clique para copiar">#47617C</button></td>
+              <td>71, 97, 124</td>
+              <td>65, 42, 25, 12</td>
+              <td>Textos secundários, bordas discretas, metadados</td>
+              <td><span class="ds-contrast-pill pass">AA (4.8:1)</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="ds-callout-warning">
+          <strong>Aviso de Especificação Cromática:</strong> Os valores CMYK são estimativas matemáticas calculadas a partir dos valores hexadecimais extraídos da apresentação original. Para tiragens gráficas finais de offset ou hot stamping de luxo, recomenda-se a homologação com provas de cor físicas ou paleta Pantone de referência.
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. TIPOGRAFIA
+         ====================================================================== -->
+    <section class="ds-section" id="tipografia">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge">06 • Tipografia</span>
+          <h2 class="ds-section-title">Sistema Tipográfico & Hierarquia</h2>
+          <p class="ds-section-desc">
+            Documentação baseada na geometria contemporânea descrita no slide 04 e aplicada na identidade institucional.
+          </p>
+        </div>
+
+        <div class="ds-callout-warning">
+          <strong>Fonte de substituição — confirmar fonte oficial:</strong> O arquivo original em PPTX/PDF não contém a declaração de fontes proprietárias no código além de tipos de sistema (Calibri / Arial). Para esta documentação do Design System, empregamos uma pilha tipográfica geométrica de alta precisão baseada em fontes do sistema operacional e compatíveis, garantindo carregamento ultrarrápido sem dependência de conexões externas ou CDN.
+        </div>
+
+        <div class="ds-type-specimens">
+          <div class="ds-type-card">
+            <span style="font-size: var(--font-size-xs); color: var(--color-gold-deep); font-weight: bold; text-transform: uppercase;">Título de Destaque / H1</span>
+            <div class="ds-type-sample-title">Advocacia Institucional de Alta Performance</div>
+            <div class="ds-type-meta">
+              <span>Peso: 700 (Bold)</span>
+              <span>Tamanho: 2.25rem (36px)</span>
+              <span>Altura de Linha: 1.2</span>
+              <span>Tracking: -0.02em</span>
+            </div>
+          </div>
+
+          <div class="ds-type-card">
+            <span style="font-size: var(--font-size-xs); color: var(--color-gold-deep); font-weight: bold; text-transform: uppercase;">Subtítulo / H2</span>
+            <div style="font-size: var(--font-size-2xl); font-weight: 600; color: var(--color-navy); margin-bottom: var(--space-2);">
+              Estrutura perene para salvaguardar negócios estratégicos
+            </div>
+            <div class="ds-type-meta">
+              <span>Peso: 600 (Semibold)</span>
+              <span>Tamanho: 1.5rem (24px)</span>
+              <span>Altura de Linha: 1.35</span>
+            </div>
+          </div>
+
+          <div class="ds-type-card">
+            <span style="font-size: var(--font-size-xs); color: var(--color-gold-deep); font-weight: bold; text-transform: uppercase;">Corpo de Texto / Parágrafo</span>
+            <div style="font-size: var(--font-size-md); color: var(--color-navy-dark); line-height: 1.6; margin-bottom: var(--space-2);">
+              A Mendonça Advocacia desenvolve teses complexas orientadas à segurança patrimonial, societária e regulatória de grupos econômicos e lideranças empresariais em todo o território nacional.
+            </div>
+            <div class="ds-type-meta">
+              <span>Peso: 400 (Regular)</span>
+              <span>Tamanho: 1rem (16px)</span>
+              <span>Altura de Linha: 1.6</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         7. GRID E COMPOSIÇÃO
+         ====================================================================== -->
+    <section class="ds-section" id="grid-composicao">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge">07 • Layout & Diagramação</span>
+          <h2 class="ds-section-title">Grid, Espaçamentos & Composição Editorial</h2>
+          <p class="ds-section-desc">
+            A estética institucional da Mendonça Advocacia fundamenta-se em amplitude de margens, respiro arquitetônico e precisão milimétrica de alinhamentos.
+          </p>
+        </div>
+
+        <div class="ds-grid-columns-demo" aria-hidden="true">
+          <div class="ds-grid-col-box">Col 1</div>
+          <div class="ds-grid-col-box">Col 2</div>
+          <div class="ds-grid-col-box">Col 3</div>
+          <div class="ds-grid-col-box">Col 4</div>
+          <div class="ds-grid-col-box">Col 5</div>
+          <div class="ds-grid-col-box">Col 6</div>
+          <div class="ds-grid-col-box">Col 7</div>
+          <div class="ds-grid-col-box">Col 8</div>
+          <div class="ds-grid-col-box">Col 9</div>
+          <div class="ds-grid-col-box">Col 10</div>
+          <div class="ds-grid-col-box">Col 11</div>
+          <div class="ds-grid-col-box">Col 12</div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-top: var(--space-6);">
+          <div style="background: var(--color-white); padding: var(--space-5); border-radius: var(--radius-md); border: 1px solid rgba(11,31,58,0.1);">
+            <strong style="color: var(--color-navy); display: block; margin-bottom: var(--space-1);">Desktop (1440px)</strong>
+            <p style="font-size: var(--font-size-xs); color: var(--color-slate-subtle);">Grid de 12 colunas, margens laterais de 80px, gutter de 32px, respiro vertical de 96px.</p>
+          </div>
+          <div style="background: var(--color-white); padding: var(--space-5); border-radius: var(--radius-md); border: 1px solid rgba(11,31,58,0.1);">
+            <strong style="color: var(--color-navy); display: block; margin-bottom: var(--space-1);">Tablet (1024px)</strong>
+            <p style="font-size: var(--font-size-xs); color: var(--color-slate-subtle);">Grid adaptável de 8 colunas, margens de 48px, gutter de 24px, compressão harmoniosa de cards.</p>
+          </div>
+          <div style="background: var(--color-white); padding: var(--space-5); border-radius: var(--radius-md); border: 1px solid rgba(11,31,58,0.1);">
+            <strong style="color: var(--color-navy); display: block; margin-bottom: var(--space-1);">Mobile (390px)</strong>
+            <p style="font-size: var(--font-size-xs); color: var(--color-slate-subtle);">Coluna fluida única, margens de 20px, botões de toque mínimo de 44px de altura.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         8. EFEITOS E ACABAMENTO EDITORIAL
+         ====================================================================== -->
+    <section class="ds-section" id="efeitos-acabamento">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge">08 • Tratamento Sensorial</span>
+          <h2 class="ds-section-title">Efeitos, Luz e Acabamentos Metálicos</h2>
+          <p class="ds-section-desc">
+            A experiência da Mendonça Advocacia não é chapada. Ela combina profundidade de campo, texturas sofisticadas de papel e detalhes em foil metálico.
+          </p>
+        </div>
+
+        <div class="ds-effects-grid">
+          <div class="ds-effect-card">
+            <div class="ds-effect-preview gold-foil">
+              FOIL DOURADO
+            </div>
+            <strong style="color: var(--color-navy); display: block; margin-bottom: 4px;">Hot Stamping Gold</strong>
+            <p style="font-size: var(--font-size-xs); color: var(--color-slate-subtle); line-height: 1.4;">
+              Acabamento em baixo-relevo metálico para cartões, pastas de conferência e assinaturas premium de selo.
+            </p>
+          </div>
+
+          <div class="ds-effect-card">
+            <div class="ds-effect-preview matte-dark">
+              NAVY SOFT-TOUCH
+            </div>
+            <strong style="color: var(--color-navy); display: block; margin-bottom: 4px;">Laminação Fosca Soft-Touch</strong>
+            <p style="font-size: var(--font-size-xs); color: var(--color-slate-subtle); line-height: 1.4;">
+              Papel com toque aveludado e absorção de luz para papelaria institucional, conferindo peso e seriedade.
+            </p>
+          </div>
+
+          <div class="ds-effect-card">
+            <div class="ds-effect-preview" style="background: var(--color-white); border: 1px solid rgba(11,31,58,0.1); color: var(--color-navy); box-shadow: var(--shadow-lg);">
+              ILUMINAÇÃO LATERAL
+            </div>
+            <strong style="color: var(--color-navy); display: block; margin-bottom: 4px;">Sombras Profundas Sutis</strong>
+            <p style="font-size: var(--font-size-xs); color: var(--color-slate-subtle); line-height: 1.4;">
+              Efeito tridimensional em cards digitais com difusão ampla (blur 30px+), simulando iluminação editorial.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         9. APLICAÇÕES FÍSICAS (PAPELARIA & CARTÕES)
+         ====================================================================== -->
+    <section class="ds-section" id="aplicacoes-fisicas">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge">09 • Identidade Tátil</span>
+          <h2 class="ds-section-title">Aplicações Físicas & Papelaria</h2>
+          <p class="ds-section-desc">
+            Modelos baseados nas páginas 09 e 10 do PDF oficial. O cartão de visitas institucional adota corpo em Navy escuro com detalhes e monograma em foil dourado.
+          </p>
+        </div>
+
+        <div class="ds-mockup-disclaimer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          DADOS DEMONSTRATIVOS — SUBSTITUIR PELOS DADOS FINAIS
+        </div>
+
+        <div class="ds-stationery-grid">
+          <!-- Cartão de Visitas Institucional -->
+          <div class="ds-card-physical-wrap">
+            <h3 style="font-size: var(--font-size-md); font-weight: bold; color: var(--color-navy); margin-bottom: var(--space-3);">Cartão de Visitas Institucional (Frente & Verso)</h3>
+            
+            <div class="ds-business-card navy-theme">
+              <div class="ds-card-foil-line"></div>
+              <div class="ds-card-logo-area">
+                <img src="assets/design-system/logo-mendonca-negativa.png" alt="Mendonça Advocacia">
+              </div>
+              <div>
+                <div class="ds-card-person-name">DIRETORIA INSTITUCIONAL</div>
+                <div class="ds-card-person-role">Mendonça Advocacia Corporativa</div>
+                <div class="ds-card-contact-list">
+                  contato@mendoncaadvocacia.com.br • +55 (11) 3456-7890<br>
+                  Av. Faria Lima, 3477 • 18º Andar • São Paulo / SP
+                </div>
+              </div>
+            </div>
+            <p style="font-size: var(--font-size-xs); color: var(--color-slate-subtle); margin-top: var(--space-2);">
+              Especificação: Cartão empastado 600g, laminação soft-touch Navy, foil dourado no símbolo e linhas.
+            </p>
+          </div>
+
+          <!-- Papel Timbrado -->
+          <div>
+            <h3 style="font-size: var(--font-size-md); font-weight: bold; color: var(--color-navy); margin-bottom: var(--space-3);">Papel Timbrado Institucional (A4)</h3>
+            <div class="ds-letterhead-mockup">
+              <div class="ds-letterhead-header">
+                <img src="assets/design-system/logo-mendonca-positiva.png" alt="Mendonça Advocacia">
+                <div style="text-align: right; font-size: 0.6875rem; color: var(--color-slate-muted);">
+                  Mendonça Advocacia OAB/SP nº 00.000<br>
+                  Pareceres & Litígios Estratégicos
+                </div>
+              </div>
+              <div class="ds-letterhead-dummy-text">
+                <strong>PARECER INSTITUCIONAL Nº 2026/089</strong><br><br>
+                À Diretoria Jurídica e Conselho de Administração,<br><br>
+                Em conformidade com a análise de conformidade regulatória e riscos estruturais, apresentamos as considerações técnicas relativas à operação societária submetida a exame...<br><br>
+                <em>[Conteúdo formal do documento timbrado institucional — Dados demonstrativos para homologação gráfica]</em>
+              </div>
+              <div class="ds-letterhead-footer">
+                Av. Brigadeiro Faria Lima, 3477, 18º Andar • Itaim Bibi • São Paulo / SP • CEP 04538-133<br>
+                www.mendoncaadvocacia.com.br • institucional@mendoncaadvocacia.com.br
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         10. APLICAÇÕES DIGITAIS
+         ====================================================================== -->
+    <section class="ds-section" id="aplicacoes-digitais">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge">10 • Presença Digital</span>
+          <h2 class="ds-section-title">Aplicações Digitais & Mídias</h2>
+          <p class="ds-section-desc">
+            A presença digital da Mendonça Advocacia projeta alta credibilidade corporativa, utilizando temas escuros profundos e linhas douradas de precisão.
+          </p>
+        </div>
+
+        <div class="ds-digital-grid">
+          <!-- Mockup Navegador Web -->
+          <div class="ds-web-mockup">
+            <div class="ds-browser-bar">
+              <div class="ds-browser-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="ds-browser-url">https://www.mendoncaadvocacia.com.br</div>
+            </div>
+            <div class="ds-web-hero-preview">
+              <div style="max-width: 500px;">
+                <img src="assets/design-system/logo-mendonca-negativa.png" alt="Mendonça Advocacia" style="max-height: 44px; margin-bottom: var(--space-4);">
+                <h3 style="font-size: var(--font-size-2xl); font-weight: bold; line-height: 1.2; margin-bottom: var(--space-2);">
+                  Excelência Jurídica Estratégica
+                </h3>
+                <p style="font-size: var(--font-size-sm); color: var(--color-slate-light); margin-bottom: var(--space-5);">
+                  Atuação técnica e personalizada para proteger interesses corporativos e construir soluções sólidas em cenários de alta complexidade.
+                </p>
+                <div style="display: flex; gap: var(--space-3);">
+                  <button class="ds-btn ds-btn-gold" style="font-size: 0.75rem; padding: 6px 14px;">Conhecer Escritório</button>
+                  <button class="ds-btn ds-btn-outline" style="font-size: 0.75rem; padding: 6px 14px; border-color: rgba(255,255,255,0.3); color: #fff;">Áreas de Atuação</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mockup Post Social / Banner -->
+          <div class="ds-social-post-card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 0.6875rem; color: var(--color-gold); font-weight: bold; letter-spacing: 0.1em; text-transform: uppercase;">ARTIGO INSTITUCIONAL</span>
+              <img src="assets/design-system/simbolo-m-gold.png" alt="M" style="max-height: 24px;">
+            </div>
+            <div>
+              <h4 style="font-size: var(--font-size-lg); font-weight: bold; line-height: 1.3; margin-bottom: var(--space-2);">
+                Segurança Societária & Governança em Grupos Familiares
+              </h4>
+              <p style="font-size: var(--font-size-xs); color: var(--color-slate-light);">
+                Análise estratégica sobre sucessão e proteção de ativos.
+              </p>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: var(--space-2); font-size: 0.6875rem; color: var(--color-slate-muted);">
+              <span>mendoncaadvocacia.com.br</span>
+              <span>Leitura de 4 min</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         11. COMPONENTES INTERATIVOS UI
+         ====================================================================== -->
+    <section class="ds-section" id="componentes">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge">11 • UI Kit Reutilizável</span>
+          <h2 class="ds-section-title">Componentes de Interface</h2>
+          <p class="ds-section-desc">
+            Elementos de navegação, chamada para ação e apresentação de dados com estados interativos e conformidade de foco e contraste.
+          </p>
+        </div>
+
+        <div class="ds-components-showcase">
+          <!-- Botões -->
+          <div class="ds-component-block">
+            <h3 class="ds-component-title">Botões Institucionais & Ações Primárias</h3>
+            <div class="ds-button-matrix">
+              <button class="ds-btn ds-btn-primary">Botão Primário Navy</button>
+              <button class="ds-btn ds-btn-gold">Botão Dourado Premium</button>
+              <button class="ds-btn ds-btn-outline">Botão Linha / Outline</button>
+              <button class="ds-btn" style="color: var(--color-navy); text-decoration: underline;">Link com Seta →</button>
+            </div>
+          </div>
+
+          <!-- Cards & Indicadores -->
+          <div class="ds-component-block">
+            <h3 class="ds-component-title">Cards de Destaque & Indicadores</h3>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4);">
+              <div style="background: #f8fafc; padding: var(--space-4); border-radius: var(--radius-md); border: 1px solid #e2e8f0;">
+                <span style="font-size: var(--font-size-2xl); font-weight: bold; color: var(--color-navy); display: block;">+25 Anos</span>
+                <span style="font-size: var(--font-size-xs); color: var(--color-slate-subtle);">De tradição e atuação institucional</span>
+              </div>
+              <div style="background: #f8fafc; padding: var(--space-4); border-radius: var(--radius-md); border: 1px solid #e2e8f0;">
+                <span style="font-size: var(--font-size-2xl); font-weight: bold; color: var(--color-gold-deep); display: block;">100%</span>
+                <span style="font-size: var(--font-size-xs); color: var(--color-slate-subtle);">Conformidade ética e técnica</span>
+              </div>
+              <div style="background: #f8fafc; padding: var(--space-4); border-radius: var(--radius-md); border: 1px solid #e2e8f0;">
+                <span style="font-size: var(--font-size-2xl); font-weight: bold; color: var(--color-navy); display: block;">R$ 2.4 Bi</span>
+                <span style="font-size: var(--font-size-xs); color: var(--color-slate-subtle);">Em interesses corporativos tutelados</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         12. DO AND DON'T
+         ====================================================================== -->
+    <section class="ds-section" id="do-and-dont">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge">12 • Governança Visual</span>
+          <h2 class="ds-section-title">Diretrizes de Uso: Do & Don't</h2>
+          <p class="ds-section-desc">
+            Exemplos visuais de boas práticas obrigatórias e usos estritamente proibidos para resguardar a integridade da marca.
+          </p>
+        </div>
+
+        <div class="ds-dodont-grid">
+          <!-- Correto: Fundo Escuro -->
+          <div class="ds-dodont-card">
+            <div class="ds-dodont-canvas do-canvas" style="background: var(--color-navy-dark);">
+              <span class="ds-dodont-badge do-badge">Correto</span>
+              <img src="assets/design-system/logo-mendonca-negativa.png" alt="Uso correto" style="max-height: 48px;">
+            </div>
+            <div class="ds-dodont-info">
+              <h4 class="ds-dodont-title">Logo negativa sobre Navy Profundo</h4>
+              <p class="ds-dodont-desc">Garante legibilidade máxima e alto contraste com elegância e fidelidade.</p>
+            </div>
+          </div>
+
+          <!-- Incorreto: Logo Escura em Fundo Escuro -->
+          <div class="ds-dodont-card">
+            <div class="ds-dodont-canvas dont-canvas" style="background: #0f172a;">
+              <span class="ds-dodont-badge dont-badge">Proibido</span>
+              <img src="assets/design-system/logo-mendonca-positiva.png" alt="Uso incorreto: logo escura em fundo escuro" style="max-height: 48px; opacity: 0.35;">
+            </div>
+            <div class="ds-dodont-info">
+              <h4 class="ds-dodont-title">Logo positiva sobre fundo escuro</h4>
+              <p class="ds-dodont-desc">Nunca aplique a versão com texto azul em superfícies pretas ou navy. Inviabiliza a leitura.</p>
+            </div>
+          </div>
+
+          <!-- Correto: Respiro Adequado -->
+          <div class="ds-dodont-card">
+            <div class="ds-dodont-canvas do-canvas" style="background: var(--color-ivory);">
+              <span class="ds-dodont-badge do-badge">Correto</span>
+              <img src="assets/design-system/logo-mendonca-positiva.png" alt="Uso correto com respiro" style="max-height: 48px;">
+            </div>
+            <div class="ds-dodont-info">
+              <h4 class="ds-dodont-title">Respiro e proporção mantidos</h4>
+              <p class="ds-dodont-desc">Margens de segurança respeitadas e proporção original intacta sem distorções horizontais.</p>
+            </div>
+          </div>
+
+          <!-- Incorreto: Deformação da Logo -->
+          <div class="ds-dodont-card">
+            <div class="ds-dodont-canvas dont-canvas" style="background: var(--color-ivory);">
+              <span class="ds-dodont-badge dont-badge">Proibido</span>
+              <img src="assets/design-system/logo-mendonca-positiva.png" alt="Uso incorreto: logo distorcida" style="max-height: 48px; transform: scaleX(1.4) scaleY(0.8);">
+            </div>
+            <div class="ds-dodont-info">
+              <h4 class="ds-dodont-title">Distorção dimensional ou achatamento</h4>
+              <p class="ds-dodont-desc">É terminantemente proibido esticar, condensar ou alterar o aspect ratio da logo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         13. TOKENS PARA DESENVOLVIMENTO
+         ====================================================================== -->
+    <section class="ds-section" id="tokens-desenvolvimento">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge">13 • Especificação Técnica</span>
+          <h2 class="ds-section-title">Tokens CSS Custom Properties</h2>
+          <p class="ds-section-desc">
+            Variáveis prontas para integração em aplicações web corporativas, portais institucionais e sistemas de documentação.
+          </p>
+        </div>
+
+        <div class="ds-code-block-wrap">
+          <div class="ds-code-header">
+            <span class="ds-code-title">css/tokens-mendonca-advocacia.css</span>
+            <button class="ds-copy-btn" data-target="#tokensCode">Copiar Tokens</button>
+          </div>
+          <pre class="ds-code-pre"><code id="tokensCode">:root {
+  /* Cores Oficiais Mendonça Advocacia (PPTX & PDF) */
+  --color-navy-dark: #070B12;      /* Fundo Institucional / Ink */
+  --color-navy: #0B1F3A;           /* Cor Âncora Principal */
+  --color-navy-slate: #17202D;     /* Superfície Secundária */
+  --color-gold: #D4A72C;           /* Assinatura Dourada Oficial */
+  --color-gold-deep: #B88A18;      /* Dourado Escuro / Foil */
+  --color-ivory: #F6F1E7;          /* Marfim Base */
+  --color-white: #FFFFFF;          /* Branco Puro */
+  --color-slate-muted: #47617C;    /* Texto Secundário */
+
+  /* Tipografia */
+  --font-family-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-serif: "Playfair Display", Georgia, serif;
+  --font-family-mono: ui-monospace, Menlo, Consolas, monospace;
+
+  /* Escala de Espaçamento */
+  --space-unit: 8px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Sombras & Acabamento */
+  --shadow-subtle: 0 4px 12px rgba(7, 11, 18, 0.08);
+  --shadow-elevation: 0 16px 40px rgba(7, 11, 18, 0.16);
+  --shadow-gold: 0 8px 25px rgba(212, 167, 44, 0.25);
+  --grad-gold: linear-gradient(135deg, #D4A72C 0%, #F7D570 50%, #B88A18 100%);
+  --grad-navy: linear-gradient(135deg, #070B12 0%, #0B1F3A 60%, #17202D 100%);
+
+  /* Grid & Breakpoints */
+  --breakpoint-desktop: 1440px;
+  --breakpoint-tablet: 1024px;
+  --breakpoint-mobile: 390px;
+  --container-max-width: 1200px;
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         14. ORIGEM DAS DECISÕES (AUDITORIA)
+         ====================================================================== -->
+    <section class="ds-section" id="origem-decisoes">
+      <div class="ds-container">
+        <div class="ds-section-header">
+          <span class="ds-section-badge">14 • Auditoria & Rastreabilidade</span>
+          <h2 class="ds-section-title">Matriz de Decisões & Origem Técnica</h2>
+          <p class="ds-section-desc">
+            Rastreabilidade completa de cada elemento deste Design System mapeado contra o PPTX e o PDF de referência.
+          </p>
+        </div>
+
+        <table class="ds-audit-table" aria-label="Matriz de Auditoria de Decisões">
+          <thead>
+            <tr>
+              <th>Item / Elemento</th>
+              <th>Fonte PPTX</th>
+              <th>Fonte PDF</th>
+              <th>Status</th>
+              <th>Justificativa Técnica</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Logotipo Oficial (Positivo & Negativo)</strong></td>
+              <td>Slide 05 (mockup)</td>
+              <td>Página 06 (vetores)</td>
+              <td><span class="ds-badge-status approved">Aprovado</span></td>
+              <td>Extraído diretamente do fluxo de imagem com canal alfa do PDF oficial.</td>
+            </tr>
+            <tr>
+              <td><strong>Cores Oficiais (Navy & Gold)</strong></td>
+              <td>Slide XML <code>srgbClr</code></td>
+              <td>Páginas 04, 06, 10</td>
+              <td><span class="ds-badge-status extracted">Extraído</span></td>
+              <td>Códigos HEX <code>#070B12</code>, <code>#0B1F3A</code>, <code>#D4A72C</code> nativos do arquivo estrutural.</td>
+            </tr>
+            <tr>
+              <td><strong>Arquitetura da Marca</strong></td>
+              <td>Slide 03</td>
+              <td>Página 03</td>
+              <td><span class="ds-badge-status approved">Aprovado</span></td>
+              <td>Classificação exata como marca institucional e guarda-chuva do ecossistema.</td>
+            </tr>
+            <tr>
+              <td><strong>Regras de Uso e 4 Versões</strong></td>
+              <td>Não incluído</td>
+              <td>Página 07</td>
+              <td><span class="ds-badge-status approved">Aprovado</span></td>
+              <td>Adotado integralmente do PDF (versões Principal, Negativa, Monocromática e Reduzida).</td>
+            </tr>
+            <tr>
+              <td><strong>Cartão de Visitas Institucional</strong></td>
+              <td>Slide 07 e 08</td>
+              <td>Páginas 09 e 10</td>
+              <td><span class="ds-badge-status approved">Aprovado</span></td>
+              <td>Mendonça Advocacia definida com base Navy escuro e detalhes em ouro.</td>
+            </tr>
+            <tr>
+              <td><strong>Fontes e Tipografia</strong></td>
+              <td>Calibri (Tema)</td>
+              <td>ArialMT / BoldMT</td>
+              <td><span class="ds-badge-status estimated">Substituição</span></td>
+              <td>Fontes de sistema usadas como substituição; confirmação da fonte comercial pendente.</td>
+            </tr>
+            <tr>
+              <td><strong>Dados de Contato e Endereço</strong></td>
+              <td>Ausente</td>
+              <td>Ausente</td>
+              <td><span class="ds-badge-status pending">Demonstrativo</span></td>
+              <td>Utilizados dados demonstrativos com aviso de substituição para produção final.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- Scripts Utilitários Compartilhados (Zero CDN) -->
+<script src="js/design-system.js"></script>
+
+</body>
+</html>
