@@ -1,0 +1,22 @@
+{
+  "name": "mendonca-advocacia-hero",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Institutional hero section for Mendonça Advocacia featuring interactive gaze-tracking video portrait.",
+  "scripts": {
+    "dev": "npx serve -l 3000 -s .",
+    "start": "npx serve -l 3000 -s ."
+  },
+  "keywords": [
+    "law-firm",
+    "institutional",
+    "interactive-portrait",
+    "video-tracking"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^3.15.0"
+  }
+}
