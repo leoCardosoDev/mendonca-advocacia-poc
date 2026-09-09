@@ -255,85 +255,97 @@ code, pre {
   transition: var(--transition-fast);
 }
 
-/* Sidebar Fixa */
+/* Sidebar Fixa - DESKTOP (Sem Scroll no Menu) */
 .ds-sidebar {
   width: var(--sidebar-width);
   min-width: var(--sidebar-width);
   height: 100vh;
+  max-height: 100vh;
   position: sticky;
   top: 0;
   background: var(--color-navy-dark);
   color: var(--color-white);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   border-right: 1px solid var(--color-slate-border);
   z-index: 90;
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-slate-border) transparent;
+  overflow: hidden !important; /* No desktop NÃO pode ter scroll no menu */
+  overflow-y: hidden !important;
+  user-select: none;
 }
 
 .ds-sidebar::-webkit-scrollbar {
-  width: 5px;
-}
-.ds-sidebar::-webkit-scrollbar-thumb {
-  background: var(--color-slate-border);
-  border-radius: var(--radius-full);
+  display: none;
+  width: 0;
 }
 
 .ds-sidebar-brand {
-  padding: var(--space-6) var(--space-6) var(--space-4);
+  padding: 14px 20px 10px;
   border-bottom: 1px solid var(--color-slate-border);
+  flex-shrink: 0;
 }
 
 .ds-sidebar-ecosystem-tag {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  font-size: 0.6875rem;
+  font-size: 0.625rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--brand-accent, var(--color-gold));
   font-weight: var(--font-weight-semibold);
-  margin-bottom: var(--space-3);
+  margin-bottom: 6px;
 }
 
 .ds-sidebar-logo-link {
   display: block;
-  margin-bottom: var(--space-3);
+  margin-bottom: 4px;
 }
 
 .ds-sidebar-logo {
   max-width: 100%;
   height: auto;
-  max-height: 48px;
+  max-height: 28px;
   object-fit: contain;
 }
 
 .ds-sidebar-doc-meta {
-  font-size: var(--font-size-xs);
+  font-size: 0.6875rem;
   color: var(--color-slate-light);
-  line-height: 1.4;
+  line-height: 1.3;
+  opacity: 0.75;
 }
 
-/* Menu de Navegação */
+/* Menu de Navegação (Distribuição Vertical Perfeita) */
 .ds-sidebar-nav {
-  padding: var(--space-4) 0;
+  padding: 6px 0;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 0;
+  overflow: hidden !important; /* Sem scroll */
 }
 
 .ds-nav-section-title {
-  font-size: 0.6875rem;
+  font-size: 0.625rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--color-slate-muted);
-  padding: var(--space-2) var(--space-6);
+  padding: 3px 20px;
   font-weight: var(--font-weight-bold);
+  flex-shrink: 0;
 }
 
 .ds-nav-list {
   list-style: none;
-  margin-bottom: var(--space-4);
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  flex: 1;
+  min-height: 0;
 }
 
 .ds-nav-item {
@@ -343,13 +355,16 @@ code, pre {
 .ds-nav-link {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
-  padding: 0.625rem var(--space-6);
-  font-size: var(--font-size-sm);
+  gap: 8px;
+  padding: 3px 20px;
+  font-size: 0.775rem;
+  line-height: 1.25;
   color: var(--color-slate-light);
   border-left: 3px solid transparent;
   transition: var(--transition-fast);
-  min-height: 44px; /* Touch friendly */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .ds-nav-link:hover {
@@ -368,7 +383,8 @@ code, pre {
   font-size: 0.6875rem;
   font-family: var(--font-mono);
   color: var(--color-slate-muted);
-  min-width: 1.5rem;
+  min-width: 1.3rem;
+  flex-shrink: 0;
 }
 
 .ds-nav-link.active .ds-nav-num {
@@ -377,36 +393,36 @@ code, pre {
 
 /* Switcher do Ecossistema no Rodapé da Sidebar */
 .ds-sidebar-footer {
-  padding: var(--space-4) var(--space-6);
+  padding: 8px 20px 10px;
   border-top: 1px solid var(--color-slate-border);
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
 }
 
 .ds-sidebar-footer-title {
-  font-size: 0.6875rem;
+  font-size: 0.625rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--color-slate-muted);
-  margin-bottom: var(--space-2);
+  margin-bottom: 4px;
   font-weight: var(--font-weight-semibold);
 }
 
 .ds-ecosystem-links {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
+  gap: 2px;
 }
 
 .ds-ecosystem-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.75rem;
-  padding: var(--space-2);
+  font-size: 0.725rem;
+  padding: 3px 6px;
   border-radius: var(--radius-xs);
   color: var(--color-slate-light);
   transition: var(--transition-fast);
-  min-height: 38px;
 }
 
 .ds-ecosystem-item:hover {
@@ -418,6 +434,11 @@ code, pre {
   color: var(--brand-accent, var(--color-gold));
   font-weight: var(--font-weight-semibold);
   background: rgba(255, 255, 255, 0.05);
+}
+
+.ds-ecosystem-item small {
+  font-size: 0.625rem;
+  opacity: 0.7;
 }
 
 /* ==========================================================================
@@ -1688,9 +1709,28 @@ code, pre {
     transition: left var(--transition-normal);
     z-index: 96;
     box-shadow: var(--shadow-float);
+    overflow-y: auto !important; /* Touch scroll permitido no drawer em mobile */
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
   .ds-sidebar.is-open {
     left: 0;
+  }
+  .ds-nav-list {
+    display: block;
+    flex: none;
+  }
+  .ds-nav-link {
+    padding: 0.625rem var(--space-6);
+    font-size: var(--font-size-sm);
+    min-height: 44px; /* Touch target ergonômico em mobile */
+  }
+  .ds-ecosystem-item {
+    padding: var(--space-2);
+    min-height: 38px;
+    font-size: 0.75rem;
   }
   .ds-main {
     padding-top: var(--header-mobile-height);
@@ -1763,6 +1803,46 @@ code, pre {
     padding: var(--space-2);
     background: rgba(255, 255, 255, 0.04);
     border-radius: var(--radius-xs);
+  }
+}
+
+/* Telas Desktop com Altura Reduzida (<= 760px) - Sem Scroll no Menu */
+@media (min-width: 769px) and (max-height: 760px) {
+  .ds-sidebar-brand {
+    padding: 8px 16px 6px;
+  }
+  .ds-sidebar-ecosystem-tag {
+    margin-bottom: 2px;
+    font-size: 0.58rem;
+  }
+  .ds-sidebar-logo {
+    max-height: 22px;
+  }
+  .ds-sidebar-doc-meta {
+    display: none;
+  }
+  .ds-sidebar-nav {
+    padding: 2px 0;
+  }
+  .ds-nav-section-title {
+    padding: 2px 16px;
+    font-size: 0.58rem;
+  }
+  .ds-nav-link {
+    padding: 2px 16px;
+    font-size: 0.725rem;
+    line-height: 1.2;
+  }
+  .ds-sidebar-footer {
+    padding: 6px 16px 8px;
+  }
+  .ds-sidebar-footer-title {
+    margin-bottom: 2px;
+    font-size: 0.58rem;
+  }
+  .ds-ecosystem-item {
+    padding: 2px 4px;
+    font-size: 0.6875rem;
   }
 }
 

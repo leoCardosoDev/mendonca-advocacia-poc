@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollSpy();
   initMobileDrawer();
   initCopyTokens();
+  initDesktopSidebar();
 });
 
 /**
@@ -179,4 +180,18 @@ function showToast(message) {
   window._toastTimeout = setTimeout(() => {
     toast.classList.remove('show');
   }, 2400);
+}
+
+/**
+ * 4. Previne scroll na sidebar desktop e redireciona o mouse wheel para a página
+ */
+function initDesktopSidebar() {
+  const sidebar = document.querySelector('.ds-sidebar');
+  if (!sidebar) return;
+
+  sidebar.addEventListener('wheel', (e) => {
+    if (window.innerWidth > 768) {
+      window.scrollBy({ top: e.deltaY, behavior: 'auto' });
+    }
+  }, { passive: true });
 }
