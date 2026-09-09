@@ -24,6 +24,7 @@
 <body>
 
 <div class="ds-app">
+  <div class="ds-sidebar-backdrop" id="sidebarBackdrop" aria-hidden="true"></div>
   
   <!-- BARRA MOBILE -->
   <header class="ds-mobile-bar" role="banner">
@@ -110,7 +111,7 @@
             <p class="ds-hero-subtitle">
               A marca institucional e guarda-chuva do ecossistema Mendonça. Fundamentada em autoridade corporativa, credibilidade técnica, estabilidade jurídica e visão de grupo para proteger interesses de alta relevância.
             </p>
-            <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+            <div class="ds-hero-actions">
               <a href="#identidade-individual" class="ds-btn ds-btn-gold">Explorar Identidade</a>
               <a href="#tokens-desenvolvimento" class="ds-btn ds-btn-outline" style="border-color: rgba(255,255,255,0.3); color: #fff;">Ver Tokens CSS</a>
             </div>
@@ -387,6 +388,7 @@
           </p>
         </div>
 
+        <div class="ds-table-responsive">
         <table class="ds-color-table" aria-label="Tabela de Cores do Design System">
           <thead>
             <tr>
@@ -500,6 +502,7 @@
             </tr>
           </tbody>
         </table>
+        </div>
 
         <div class="ds-callout-warning">
           <strong>Aviso de Especificação Cromática:</strong> Os valores CMYK são estimativas matemáticas calculadas a partir dos valores hexadecimais extraídos da apresentação original. Para tiragens gráficas finais de offset ou hot stamping de luxo, recomenda-se a homologação com provas de cor físicas ou paleta Pantone de referência.
@@ -973,6 +976,7 @@
           </p>
         </div>
 
+        <div class="ds-table-responsive">
         <table class="ds-audit-table" aria-label="Matriz de Auditoria de Decisões">
           <thead>
             <tr>
@@ -1035,6 +1039,7 @@
             </tr>
           </tbody>
         </table>
+        </div>
       </div>
     </section>
 

@@ -1,6 +1,6 @@
 /**
- * MENDONÇA BRAND SYSTEM - JAVASCRIPT UTILITÁRIO
- * Funcionalidades interativas, scroll spy, cópia de tokens e navegação mobile
+ * MENDONÇA BRAND SYSTEM - JAVASCRIPT UTILITÁRIO (MOBILE FIRST)
+ * Funcionalidades interativas, scroll spy, cópia de tokens e navegação mobile com backdrop
  * Zero dependências externas
  */
 
@@ -48,25 +48,47 @@ function initScrollSpy() {
 }
 
 /**
- * 2. Menu Mobile Drawer
+ * 2. Menu Mobile Drawer com Backdrop Overlay
  */
 function initMobileDrawer() {
   const toggleBtn = document.querySelector('.ds-mobile-toggle');
   const sidebar = document.querySelector('.ds-sidebar');
+  const backdrop = document.querySelector('.ds-sidebar-backdrop');
   if (!toggleBtn || !sidebar) return;
 
+  function closeDrawer() {
+    sidebar.classList.remove('is-open');
+    if (backdrop) backdrop.classList.remove('is-active');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  function openDrawer() {
+    sidebar.classList.add('is-open');
+    if (backdrop) backdrop.classList.add('is-active');
+    toggleBtn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden'; // Impede scroll do body sob a drawer
+  }
+
   toggleBtn.addEventListener('click', () => {
-    const isOpen = sidebar.classList.toggle('is-open');
-    toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    const isOpen = sidebar.classList.contains('is-open');
+    if (isOpen) {
+      closeDrawer();
+    } else {
+      openDrawer();
+    }
   });
 
-  // Fecha o drawer ao clicar em um link
+  if (backdrop) {
+    backdrop.addEventListener('click', closeDrawer);
+  }
+
+  // Fecha o drawer ao clicar em qualquer link da sidebar
   const links = sidebar.querySelectorAll('.ds-nav-link, .ds-ecosystem-item');
   links.forEach((link) => {
     link.addEventListener('click', () => {
       if (window.innerWidth <= 768) {
-        sidebar.classList.remove('is-open');
-        toggleBtn.setAttribute('aria-expanded', 'false');
+        closeDrawer();
       }
     });
   });
@@ -74,8 +96,7 @@ function initMobileDrawer() {
   // Fecha ao pressionar ESC
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && sidebar.classList.contains('is-open')) {
-      sidebar.classList.remove('is-open');
-      toggleBtn.setAttribute('aria-expanded', 'false');
+      closeDrawer();
     }
   });
 }
@@ -84,7 +105,6 @@ function initMobileDrawer() {
  * 3. Cópia de Tokens e Códigos para o Clipboard
  */
 function initCopyTokens() {
-  // Configura botões de cópia de blocos inteiros
   const copyButtons = document.querySelectorAll('.ds-copy-btn');
   copyButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -101,7 +121,6 @@ function initCopyTokens() {
     });
   });
 
-  // Configura cliques rápidos em amostras de cores e valores individuais
   const copyableItems = document.querySelectorAll('.ds-copyable-code');
   copyableItems.forEach((item) => {
     item.addEventListener('click', () => {
